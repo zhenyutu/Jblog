@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    {{ pagedown.include_pagedown() }}
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../static/css/bootstrap-tokenfield.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="row">
+      <div class="col-md-2 col-md-offset-2 row logo"><a href="#">tuzhenyu</a></div>
+      <div class="col-md-4 col-md-offset-4 navigation">
+        <ul class="row">
+            <li class="col-md-2"><a id="home" href="/index"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+            <li class="col-md-2"><a id="project" href="/project"><i class="fa fa-server" aria-hidden="true"></i>Project</a></li>
+            <li class="col-md-2"><a id="life" href="/life"><i class="fa fa-gavel" aria-hidden="true"></i>Life</a></li>
+            <li class="col-md-2"><a id="about" href="/about"><i class="fa fa-th-large" aria-hidden="true"></i>About</a></li>
+            <li class="col-md-2"><a id="create" href="/create"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="contant">
+      {% block content %}{% endblock %}
+    </div>
+    <footer>
+      <div class="row">
+        <ul class="col-md-4 col-md-offset-5 row">
+          <div class="col-md-1"><a href="#"><i class="fa fa-weibo" aria-hidden="true"></i></a></div>
+          <div class="col-md-1"><a href="#"><i class="fa fa-qq" aria-hidden="true"></i></a></div>
+          <div class="col-md-1"><a href="#"><i class="fa fa-weixin" aria-hidden="true"></i></a></div>
+          <div class="col-md-1"><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></div>
+          <div class="col-md-1"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+          <div class="col-md-1"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+        </ul>
+      </div>
+      <div class="power"><p>@涂振宇的博客</p></div>
+    </footer>
+      <script src="../static/js/jquery-1.11.1.min.js"></script>
+      <script src="../static/js/bootstrap.min.js"></script>
+      <script src="../static/js/bootstrap-tokenfield.min.js"></script>
+      <script src="../static/js/style.js"></script>
+  </body>
+</html>
