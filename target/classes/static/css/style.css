@@ -1,0 +1,271 @@
+body{
+  width: 100%;
+  height: 100%;
+}
+
+header{
+  height: 52px;
+  background: #222;
+  margin: 0;
+  padding: 0;
+}
+.logo{
+  padding: 0;
+}
+.logo a{
+  text-decoration: none;
+  font-family:"SimHei";
+  font-size: 30px;
+  font-weight: bold;
+  color:#bbb;
+}
+.navigation ul{
+  list-style: none;
+  margin-top: 12px;
+}
+.navigation ul li a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #bbb;
+}
+.navigation .fa{
+  font-size: 20px;
+  color: #bbb;
+  margin-right: 7px;
+}
+
+
+.contant{
+  width: 100%;
+  height: 1200px;
+  background-color: #e2e2e2;
+  background: url(../img/background.jpg);
+  background-repeat:repeat;;
+  margin: 0;
+  padding-top: 15px;
+}
+
+/*×××××××××××××××××　index.html　×××××××××××××××××××*/
+.wrapper .leftSection{
+  height: 1183px;
+  padding: 20px;
+  background-color: #eee;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+}
+.leftSection ul{
+  list-style: none;
+}
+.blogAticle{
+  width: 100%;
+  height: 210px;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  border-bottom:1px solid #ccc;
+}
+.articleHeader{
+  width: 95%;
+  height: 25%;
+}
+.articleHeader a{
+  line-height: 50px;;
+  font-size: 25px;
+  font-weight: normal;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  color: #4d6dad;
+  text-decoration: none;
+}
+.articleContent{
+  width: 95%;
+  height: 55%;
+}
+.articleContent p{
+  color: #444;
+  font-size: 16px;
+}
+.articleFooter ul{
+  list-style: none;
+  margin-top: 5px;
+  padding: 0;
+}
+.articleFooter ul li{
+  display: inline-block;
+  color:#666;
+  margin-right: 12px;
+}
+.articleFooter ul li span{
+  color:#bbb;
+  font-size: 16px;
+}
+.articleFooter ul li i{
+  margin-right: 7px;
+  font-size: 18px;
+}
+.readMore{
+  float: right;
+  color: #4d6dad;
+  font-size: 16px;
+
+}
+.readMore a{
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.paginationWapper{
+  text-align: center;
+}
+.pagination li a{
+  width: 50px;
+  height: 40px;
+}
+
+.wrapper .rightSection{
+  height: 1185px;
+}
+.side{
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  padding: 5px;
+  background-color: #eee;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+}
+.side .header{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  padding-top: 5px;
+  border-bottom: 1px solid #bbb;
+}
+.side .header i{
+  font-size: 20px;
+  margin-right: 6px;
+}
+.side .header span{
+  font-size: 15px;
+  font-weight: bold;
+  color:#233;
+}
+.side ul{
+  list-style: none;
+  padding: 0;
+}
+.side ul li{
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  padding-top: 5px;
+  border-bottom: 1px solid #ccc;
+  color: #4d6dad;
+}
+.side ul li a{
+  color: #4d6dad;
+}
+/*×××××××××××××××××　create.html　×××××××××××××××××××*/
+.articleEdit form input{
+  background-color: #fff;
+  background-color: #eee;
+  border: 1px solid #aaa;
+}
+
+.flask-pagedown-input {
+  width: 615px;
+  height: 600px;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.flask-pagedown-preview {
+  width: 615px;
+  height: 600px;
+  background-color: #e2e2e2;
+  background: url(../img/background.jpg);
+  background-repeat:repeat;
+  border: 1px solid #aaa;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.articleSubmit button{
+  width: 1260px;
+  height: 40px;
+  margin-top: 30px;
+  background-color: #ddd;
+
+}
+
+#category{
+  width: 615px;
+  height:33px;
+  background-color: #fff;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+}
+
+/*×××××××××××××××××　article.html　×××××××××××××××××××*/
+.articleShow{
+  height: 1183px;
+  padding: 20px 30px;
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: #f8f8fd;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+}
+
+.articleShow .articleFooter{
+  margin-top: 20px;
+}
+
+
+
+footer{
+  width: 100%;
+  height: 80px;
+  background: #2b2b2b;
+}
+footer ul{
+  margin-top: 10px;
+}
+footer .fa{
+  font-size: 30px;
+  color: #aaa;
+  margin-right: 10px;
+}
+footer .power{
+  text-align: center;
+}
+footer p{
+  font-size: 13px;
+  color: #ccc;
+}
+
+/*×××××××××××××××××　login.html　×××××××××××××××××××*/
+
+.main-wrapper{
+    width: 2000px;
+    height: 975px;
+    background: #222 url(../img/banner.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;                                /*���ҳ��������أ���ȥ���ҹ�����*/
+}
+.good{
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+.loginWapper{
+  margin-top: 20px;
+}
+
+/*×××××××××××××××××　about.html　×××××××××××××××××××*/
+.introduce p{
+  font-size: 18px;
+}
+.aboutSite{
+  margin-top: 40px;
+}
