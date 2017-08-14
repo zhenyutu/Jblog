@@ -3,15 +3,20 @@ package cn.tzy.Jblog.controller;
 import cn.tzy.Jblog.model.Article;
 import cn.tzy.Jblog.model.ViewObject;
 import cn.tzy.Jblog.service.ArticleService;
-import com.sun.javafx.sg.prism.NGShape;
+import cn.tzy.Jblog.service.UserService;
+import com.sun.javafx.binding.StringFormatter;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.Date;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by tuzhenyu on 17-8-13.
@@ -21,6 +26,9 @@ import java.util.List;
 public class IndexController {
     @Autowired
     private ArticleService articleService;
+
+    @Autowired
+    private UserService userService;
 
     @RequestMapping(path = {"/","/index"})
     public String index(Model model){
@@ -35,8 +43,49 @@ public class IndexController {
         return "index";
     }
 
-    @RequestMapping("/login")
-    public String login(){
+    @RequestMapping("/in")
+    public String in(Model model,@RequestParam(value = "next",required = false)String next){
+        model.addAttribute("next",next);
         return "login";
+    }
+
+    @RequestMapping("/register")
+    public String register(Model model, HttpServletResponse httpResponse,
+                           @RequestParam String username, @RequestParam String password
+            ,@RequestParam(value = "next",required = false)String next){
+        Map<String,String> map = userService.register(username,password);
+        if (map.containsKey("ticket")){
+            Cookie cookie = new Cookie("ticket",map.get("ticket"));
+            cookie.setPath("/");
+            httpResponse.addCookie(cookie);
+
+            if (StringUtils.isNotBlank(next))
+                return "redirect:"+next;
+            else
+                return "redirect:/";
+        }else {
+            model.addAttribute("msg",map.get("msg"));
+            return "login";
+        }
+    }
+
+    @RequestMapping("/login")
+    public String login(Model model, HttpServletResponse httpResponse,
+                        @RequestParam String username,@RequestParam String password,@RequestParam(value = "next",required = false)String next){
+        Map<String,String> map = userService.login(username,password);
+        if (map.containsKey("ticket")) {
+            Cookie cookie = new Cookie("ticket",map.get("ticket"));
+            cookie.setPath("/");
+            httpResponse.addCookie(cookie);
+
+            if (StringUtils.isNotBlank(next)){
+                return "redirect:"+next;
+            }
+
+            return "redirect:/";
+        }else {
+            model.addAttribute("msg", map.get("msg"));
+            return "login";
+        }
     }
 }

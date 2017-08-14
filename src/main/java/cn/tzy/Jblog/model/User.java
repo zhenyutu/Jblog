@@ -10,6 +10,7 @@ public class User {
     private String password;
     private String salt;
     private String headUrl;
+    private String role;
 
     public User(){}
 
@@ -18,6 +19,7 @@ public class User {
         this.password = "";
         this.salt = "";
         this.headUrl = "";
+        this.role = "user";
     }
 
     public int getId() {
@@ -58,5 +60,13 @@ public class User {
 
     public void setHeadUrl(String headUrl) {
         this.headUrl = headUrl;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
