@@ -13,6 +13,7 @@ public class Article {
     private String content;
     private Date createdDate;
     private int commentCount;
+    private String category;
 
     public int getId() {
         return id;
@@ -61,4 +62,13 @@ public class Article {
     public void setCommentCount(int commentCount) {
         this.commentCount = commentCount;
     }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
 }

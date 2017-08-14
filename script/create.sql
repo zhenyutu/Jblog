@@ -32,6 +32,7 @@ CREATE TABLE `article` (
   `content` TEXT NULL,
   `created_date` DATETIME NOT NULL,
   `comment_count` INT NOT NULL,
+  `category` VARCHAR(32) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `date_index` (`created_date` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -41,13 +42,15 @@ DROP TABLE IF EXISTS `tag`;
 CREATE TABLE `tag` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(32) NOT NULL,
-  `count` INT NOT NULL
+  `count` INT NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 #标签文章关系表
 DROP TABLE IF EXISTS `article_tag`;
-CREATE TABLE `articleTag` (
+CREATE TABLE `article_tag` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `article_id` INT NOT NULL,
-  `tag_id` INT NOT NULL
+  `tag_id` INT NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

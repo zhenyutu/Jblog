@@ -12,11 +12,11 @@ import java.util.List;
 @Mapper
 public interface ArticleDao {
     String TABLE_NAEM = " article ";
-    String INSERT_FIELDS = " title, describes, content, created_Date, comment_Count ";
+    String INSERT_FIELDS = " title, describes, content, created_Date, comment_Count, category ";
     String SELECT_FIELDS = " id, " + INSERT_FIELDS;
 
     @Insert({"insert into",TABLE_NAEM,"(",INSERT_FIELDS,") values (#{title},#{describes},#{content}" +
-            ",#{createdDate},#{commentCount})"})
+            ",#{createdDate},#{commentCount},#{category})"})
     int insertArticle(Article article);
 
     @Select({"select",SELECT_FIELDS,"from",TABLE_NAEM,"where id=#{id}"})

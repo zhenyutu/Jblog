@@ -25,7 +25,7 @@
     </div>
 </header>
 <div id="layout">
-    <form action="/postForm"  method = "post">
+    <form action="/article/add"  method = "post">
         <div class="title option"><label>Title</label><input type="text" class="form-control" id="title" name="title"></div>
         <div class="row categoryTag">
             <div class="col-md-6"><div><label>Category</label></div>
@@ -45,7 +45,7 @@
         <div class="option"><label>Content</label></div>
         <div class="row">
             <div id="test-editormd">
-                <textarea style="display:none;"></textarea>
+                <textarea id="content" name="content" style="display:none;"></textarea>
             </div>
         </div>
         <div class="form-group articleSubmit option">

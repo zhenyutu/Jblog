@@ -1,5 +1,9 @@
 package cn.tzy.Jblog.util;
 import com.alibaba.fastjson.JSONObject;
+import com.vladsch.flexmark.ast.Node;
+import com.vladsch.flexmark.html.HtmlRenderer;
+import com.vladsch.flexmark.parser.Parser;
+import com.vladsch.flexmark.util.options.MutableDataSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -53,5 +57,13 @@ public class WendaUtil {
             logger.error("生成MD5失败", e);
             return null;
         }
+    }
+
+    public static String tranfer(String content){
+        MutableDataSet options = new MutableDataSet();
+        Parser parser = Parser.builder(options).build();
+        HtmlRenderer renderer = HtmlRenderer.builder(options).build();
+        Node document = parser.parse(content);
+        return renderer.render(document);
     }
 }
