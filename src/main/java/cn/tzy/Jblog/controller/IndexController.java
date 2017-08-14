@@ -3,6 +3,7 @@ package cn.tzy.Jblog.controller;
 import cn.tzy.Jblog.model.Article;
 import cn.tzy.Jblog.model.ViewObject;
 import cn.tzy.Jblog.service.ArticleService;
+import com.sun.javafx.sg.prism.NGShape;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,5 +33,10 @@ public class IndexController {
         model.addAttribute("articles",articles);
         model.addAttribute("pagination",pagination);
         return "index";
+    }
+
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
     }
 }
