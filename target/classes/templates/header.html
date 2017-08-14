@@ -7,6 +7,7 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet"/>
     <link href="../css/bootstrap-tokenfield.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/editormd.min.css" rel="stylesheet">
 </head>
 <body>
 <header class="row">
@@ -17,7 +18,9 @@
             <li class="col-md-2"><a id="project" href="/project"><i class="fa fa-server" aria-hidden="true"></i>Project</a></li>
             <li class="col-md-2"><a id="life" href="/life"><i class="fa fa-gavel" aria-hidden="true"></i>Life</a></li>
             <li class="col-md-2"><a id="about" href="/about"><i class="fa fa-th-large" aria-hidden="true"></i>About</a></li>
+            #if($create > 0)
             <li class="col-md-2"><a id="create" href="/create"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
+            #end
         </ul>
     </div>
 </header>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.openhtmltopdf:openhtmltopdf-rtl-support:0.0.1-RC9">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/openhtmltopdf/openhtmltopdf-rtl-support/0.0.1-RC9/openhtmltopdf-rtl-support-0.0.1-RC9.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/openhtmltopdf/openhtmltopdf-rtl-support/0.0.1-RC9/openhtmltopdf-rtl-support-0.0.1-RC9-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/openhtmltopdf/openhtmltopdf-rtl-support/0.0.1-RC9/openhtmltopdf-rtl-support-0.0.1-RC9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
