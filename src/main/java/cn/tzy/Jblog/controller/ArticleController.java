@@ -6,28 +6,29 @@ import cn.tzy.Jblog.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Date;
 import java.util.List;
 
 /**
- * Created by tuzhenyu on 17-8-13.
+ * Created by tuzhenyu on 17-8-14.
  * @author tuzhenyu
  */
 @Controller
-public class IndexController {
+public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
-    @RequestMapping(path = {"/","/index"})
-    public String index(Model model){
-        List<Article> articles = articleService.getLatestArticles(0,4);
+    @RequestMapping(path = "/page/{pageId}")
+    public String article(Model model, @PathVariable("pageId")int pageId){
+        List<Article> articles = articleService.getLatestArticles((pageId-1)*4,4);
         ViewObject pagination = new ViewObject();
         int count = articleService.getArticleCount();
-        pagination.set("current",1);
-        pagination.set("nextPage",2);
+        pagination.set("current",pageId);
+        pagination.set("nextPage",pageId+1);
+        pagination.set("prePage",pageId-1);
         pagination.set("lastPage",count/4+1);
         model.addAttribute("articles",articles);
         model.addAttribute("pagination",pagination);

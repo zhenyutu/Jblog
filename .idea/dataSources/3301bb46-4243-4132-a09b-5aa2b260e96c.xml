@@ -31,14 +31,14 @@
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="19" parent="14" name="content">
+    <column id="19" parent="14" name="describes">
       <Position>3</Position>
-      <DataType>text|0</DataType>
-    </column>
-    <column id="20" parent="14" name="user_id">
-      <Position>4</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="14" name="content">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
     </column>
     <column id="21" parent="14" name="created_date">
       <Position>5</Position>

@@ -12,18 +12,21 @@ import java.util.List;
 @Mapper
 public interface ArticleDao {
     String TABLE_NAEM = " article ";
-    String INSERT_FIELDS = " title, content, created_Date, user_Id, comment_Count ";
+    String INSERT_FIELDS = " title, describes, content, created_Date, comment_Count ";
     String SELECT_FIELDS = " id, " + INSERT_FIELDS;
 
-    @Insert({"insert into",TABLE_NAEM,"(",INSERT_FIELDS,") values (#{title},#{content}," +
-            "#{createdDate},#{userId},#{commentCount})"})
-    int insertQuestion(Article article);
+    @Insert({"insert into",TABLE_NAEM,"(",INSERT_FIELDS,") values (#{title},#{describes},#{content}" +
+            ",#{createdDate},#{commentCount})"})
+    int insertArticle(Article article);
 
     @Select({"select",SELECT_FIELDS,"from",TABLE_NAEM,"where id=#{id}"})
-    Article seletById(int id);
+    Article selectById(int id);
 
     @Select({"select",SELECT_FIELDS,"from",TABLE_NAEM,"order by id desc limit #{offset},#{limit}"})
     List<Article> selectLatestArticles(@Param("offset") int offset, @Param("limit") int limit);
+
+    @Select({"select count(id) from",TABLE_NAEM})
+    int getArticleCount();
 
     @Update({"update",TABLE_NAEM,"set comment_count = #{commentCount} where id = #{questionId}"})
     void updateCommentCount(@Param("questionId") int questionId,@Param("commentCount") int commentCount);

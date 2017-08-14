@@ -5,40 +5,53 @@
       <div class="col-md-8 row">
         <div class="col-md-9 leftSection">
           <ul class="articles">
-            {% for article in articles %}
+            #foreach($article in $articles)
               <li class="blogAticle">
                 <div class="articleHeader">
-                  <p><a href="{{ url_for('article', id=article.id) }}">{{article.title}}</a></p>
+                  <p><a href="/article/$!{article.id}">$!{article.title}</a></p>
                 </div>
                 <div class="articleContent">
-                  <p>{{article.describe}}</p>
+                  <p>$!{article.describes}</p>
                 </div>
                 <div class="articleFooter">
                   <ul>
-                    <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>{{article.timestamp}}</span></li>
-                    <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>{{article.category}}</span></li>
-                    <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i><span>{{article.tag}}</span></li>
-                    <li class="readMore"><a href="{{ url_for('article', id=article.id) }}">read more</a></li>
+                    <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>$date.format('yyyy-MM-dd HH:mm:ss', $!{article.createdDate})</span></li>
+                    <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>$!{}</span></li>
+                    <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i><span>$!{}</span></li>
+                    <li class="readMore"><a href="/article/$!{article.id}">read more</a></li>
                   </ul>
                 </div>
               </li>
-            {% endfor %}
+            #end
           </ul>
           <div class="paginationWapper">
             <ul class="pagination">
-              <li {% if not pagination.has_prev %} class="disabled"{% endif %}>
-                <a href="{% if pagination.has_prev %}{{ url_for('index',page = pagination.page - 1) }}{% else %}#{% endif %}">&laquo;</a>
+              #if($pagination.current > 1)
+              <li>
+                <a href="/page/$!{pagination.prePage}">&laquo;</a>
               </li>
-              {% for p in pagination.iter_pages() %}
-                {% if p %}
-                  <li><a href="{{ url_for('index', page = p) }}">{{p}}</a></li>
-                {% else %}
-                <li><a href="{{ url_for('index', page = p) }}">...</a></li>
-                {% endif %}
-              {% endfor %}
-              <li {% if not pagination.has_next %} class="disabled"{% endif %}>
-                <a href="{% if pagination.has_next %}{{ url_for('index',page = pagination.page + 1) }}{% else %}#{% endif %}">&raquo;</a>
+              #else
+              <li class="disabled">
+                <a href="">&laquo;</a>
               </li>
+              #end
+              <li><a href="">$!{pagination.current}/$!{pagination.lastPage}</a></li>
+              <!--{% for p in pagination.iter_pages() %}-->
+                <!--{% if p %}-->
+                  <!--<li><a href="{{ url_for('index', page = p) }}">{{p}}</a></li>-->
+                <!--{% else %}-->
+                <!--<li><a href="{{ url_for('index', page = p) }}">...</a></li>-->
+                <!--{% endif %}-->
+              <!--{% endfor %}-->
+              #if($pagination.current < $pagination.lastPage)
+              <li>
+                <a href="/page/$!{pagination.nextPage}">&raquo;</a>
+              </li>
+              #else
+              <li class="disabled">
+                <a href="">&raquo;</a>
+              </li>
+              #end
             </ul>
           </div>
         </div>

@@ -27,9 +27,8 @@ DROP TABLE IF EXISTS `article`;
 CREATE TABLE `article` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(255) NOT NULL,
-  `describe` VARCHAR(255) NOT NULL,
+  `describes` VARCHAR(255) NOT NULL,
   `content` TEXT NULL,
-  `user_id` INT NOT NULL,
   `created_date` DATETIME NOT NULL,
   `comment_count` INT NOT NULL,
   PRIMARY KEY (`id`),

@@ -17,11 +17,15 @@ public class ArticleService {
     private ArticleDao articleDao;
 
     public int addArticle(Article article){
-        return articleDao.insertQuestion(article)>0?article.getId():0;
+        return articleDao.insertArticle(article)>0?article.getId():0;
     }
 
     public Article getArticleById(int qId){
-        return articleDao.seletById(qId);
+        return articleDao.selectById(qId);
+    }
+
+    public int getArticleCount(){
+        return articleDao.getArticleCount();
     }
 
     public List<Article> getLatestArticles(int offset, int limit){

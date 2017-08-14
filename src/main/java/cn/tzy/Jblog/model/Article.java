@@ -9,9 +9,9 @@ import java.util.Date;
 public class Article {
     private int id;
     private String title;
+    private String describes;
     private String content;
     private Date createdDate;
-    private int userId;
     private int commentCount;
 
     public int getId() {
@@ -30,6 +30,14 @@ public class Article {
         this.title = title;
     }
 
+    public String getDescribes() {
+        return describes;
+    }
+
+    public void setDescribes(String describes) {
+        this.describes = describes;
+    }
+
     public String getContent() {
         return content;
     }
@@ -44,14 +52,6 @@ public class Article {
 
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
     }
 
     public int getCommentCount() {
