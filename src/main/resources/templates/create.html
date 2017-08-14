@@ -1,0 +1,34 @@
+#parse("header.html")
+    <div class="contant">
+        <div class="articleEdit wrapper row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8 row">
+            <form action="/postForm"  method = "post">
+                <div class="title"><label>Title</label><input type="text" class="form-control" id="title" name="title"></div>
+                <div class="row">
+                  <div class="col-md-6"><div><label>Category</label></div>
+                    <select class="" class="form-control" id="category"  name="category">
+                      <option value="Java">Java</option>
+                      <option value="Python">Python</option>
+                      <option value="Web">Web</option>
+                      <option value="算法">算法</option>
+                      <option value="大数据">大数据</option>
+                      <option value="机器学习">机器学习</option>
+                      <option value="其它">其它</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6"><label>Tag</label><input type="text" class="form-control" id="tag" name="tag"></div>
+                </div>
+                <div class="describe"><label>Describe</label><input type="text" class="form-control" id="describe" name="describe"></div>
+                <div class="row">
+                  <div class="col-md-6">{{ form.markDownEdit(only_preview=True, rows=10) }}</div>
+                  <div class="col-md-6">{{ form.markDownEdit(only_input=True, rows=10) }}</div>
+                </div>
+                <div class="form-group articleSubmit">
+                    <button  type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+#parse("footer.html")

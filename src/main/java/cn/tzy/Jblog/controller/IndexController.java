@@ -1,14 +1,18 @@
 package cn.tzy.Jblog.controller;
 
 import cn.tzy.Jblog.model.Article;
+import cn.tzy.Jblog.model.HostHolder;
+import cn.tzy.Jblog.model.User;
 import cn.tzy.Jblog.model.ViewObject;
 import cn.tzy.Jblog.service.ArticleService;
 import cn.tzy.Jblog.service.UserService;
 import com.sun.javafx.binding.StringFormatter;
+import com.sun.javafx.sg.prism.NGShape;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -30,11 +34,22 @@ public class IndexController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private HostHolder hostHolder;
+
     @RequestMapping(path = {"/","/index"})
     public String index(Model model){
         List<Article> articles = articleService.getLatestArticles(0,4);
+
         ViewObject pagination = new ViewObject();
         int count = articleService.getArticleCount();
+
+        User user = hostHolder.getUser();
+        if (user==null||"admin".equals(user.getRole())){
+            model.addAttribute("create",1);
+        }else {
+            model.addAttribute("create",0);
+        }
         pagination.set("current",1);
         pagination.set("nextPage",2);
         pagination.set("lastPage",count/4+1);
@@ -87,5 +102,22 @@ public class IndexController {
             model.addAttribute("msg", map.get("msg"));
             return "login";
         }
+    }
+
+    @RequestMapping("/logout")
+    public String logout(@CookieValue("ticket") String ticket){
+        userService.logout(ticket);
+        return "redirect:/";
+    }
+
+    @RequestMapping("/create")
+    public String create(Model model){
+        User user = hostHolder.getUser();
+        if (user==null||"admin".equals(user.getRole())){
+            model.addAttribute("create",1);
+        }else {
+            model.addAttribute("create",0);
+        }
+        return "create";
     }
 }
