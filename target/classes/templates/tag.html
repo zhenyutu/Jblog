@@ -28,7 +28,7 @@
             <ul class="pagination">
               #if($pagination.current > 1)
               <li>
-                <a href="/category/$!{category}?pageId=$!{pagination.prePage}">&laquo;</a>
+                <a href="/tag/$!{tagId}?pageId=$!{pagination.prePage}">&laquo;</a>
               </li>
               #else
               <li class="disabled">
@@ -36,16 +36,9 @@
               </li>
               #end
               <li><a href="">$!{pagination.current}/$!{pagination.lastPage}</a></li>
-              <!--{% for p in pagination.iter_pages() %}-->
-                <!--{% if p %}-->
-                  <!--<li><a href="{{ url_for('index', page = p) }}">{{p}}</a></li>-->
-                <!--{% else %}-->
-                <!--<li><a href="{{ url_for('index', page = p) }}">...</a></li>-->
-                <!--{% endif %}-->
-              <!--{% endfor %}-->
               #if($pagination.current < $pagination.lastPage)
               <li>
-                <a href="/category/$!{category}?pageId=$!{pagination.nextPage}">&raquo;</a>
+                <a href="/tag/$!{tagId}?pageId=$!{pagination.nextPage}">&raquo;</a>
               </li>
               #else
               <li class="disabled">

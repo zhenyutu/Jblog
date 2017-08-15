@@ -26,8 +26,11 @@ public interface ArticleTagDao {
     @Select({"select",TAG_FIELDS,"from tag where id in (select tag_id from article_tag where article_id=#{articleId})"})
     List<Tag> selectByArticleId(int articleId);
 
-    @Select({"select",ARTICLE_FIELDS,"from article where id in (select article_id from article_tag where tag_id=#{tagId})"})
-    List<Article> selectByTagId(int tagId);
+    @Select({"select",ARTICLE_FIELDS,"from article where id in (select article_id from article_tag where tag_id=#{tagId}) limit #{offset},#{limit}"})
+    List<Article> selectByTagId(@Param("tagId") int tagId,@Param("offset") int offset, @Param("limit") int limit);
+
+    @Select({"select count(id) from article where id in (select article_id from article_tag where tag_id=#{tagId})"})
+    int selectArticleCountByTagId(@Param("tagId") int tagId);
 
     @Delete({"delete from",TABLE_NAEM,"where id=#{id}"})
     void deleteById(int id);

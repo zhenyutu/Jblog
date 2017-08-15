@@ -72,7 +72,7 @@
             <div class="header"><i class="fa fa-tags" aria-hidden="true"></i><span>Tags</span></div>
             <div id="tagCloud">
               #foreach($tag in $tags)
-              <a href="/tag/$!{tag.name}?pageId=1" rel="$!{tag.count}">$!{tag.name}</a>
+              <a href="/tag/$!{tag.id}?pageId=1" rel="$!{tag.count}">$!{tag.name}</a>
               #end
             </div>
           </div>

@@ -119,4 +119,31 @@ public class ArticleController {
         model.addAttribute("category",categoryName);
         return "category";
     }
+
+    @RequestMapping(value = "/tag/{tagId}",method = RequestMethod.GET)
+    public String tag(Model model, @PathVariable("tagId")int tagId, @RequestParam("pageId")int pageId){
+
+        List<Article> articles = articleService.getArticlesByTag(tagId,(pageId-1)*4,4);
+        ViewObject pagination = new ViewObject();
+        int count = articleService.getArticleCountByTag(tagId);
+
+        pagination.set("current",pageId);
+        pagination.set("nextPage",pageId+1);
+        pagination.set("prePage",pageId-1);
+        pagination.set("lastPage",count/4+1);
+
+        User user = hostHolder.getUser();
+        if (user==null||"admin".equals(user.getRole())){
+            model.addAttribute("create",1);
+        }else {
+            model.addAttribute("create",0);
+        }
+
+        List<Tag> tags = tagService.getAllTag();
+        model.addAttribute("tags",tags);
+        model.addAttribute("articles",articles);
+        model.addAttribute("pagination",pagination);
+        model.addAttribute("tagId",tagId);
+        return "tag";
+    }
 }
