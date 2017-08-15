@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -32,10 +33,19 @@ public class ArticleController {
 
     @RequestMapping(path = "/page/{pageId}")
     public String article(Model model, @PathVariable("pageId")int pageId){
+        List<ViewObject> vos = new ArrayList<>();
         List<Article> articles = articleService.getLatestArticles((pageId-1)*4,4);
+        for (Article article:articles){
+            ViewObject vo = new ViewObject();
+            List<Tag> tags = tagService.getTagByArticleId(article.getId());
+            vo.set("article",article);
+            vo.set("tags",tags);
+            vos.add(vo);
+        }
+        model.addAttribute("vos",vos);
+
         ViewObject pagination = new ViewObject();
         int count = articleService.getArticleCount();
-
         pagination.set("current",pageId);
         pagination.set("nextPage",pageId+1);
         pagination.set("prePage",pageId-1);
@@ -50,7 +60,6 @@ public class ArticleController {
 
         List<Tag> tags = tagService.getAllTag();
         model.addAttribute("tags",tags);
-        model.addAttribute("articles",articles);
         model.addAttribute("pagination",pagination);
         return "index";
     }
@@ -97,6 +106,17 @@ public class ArticleController {
     @RequestMapping(value = "/category/{categoryName}",method = RequestMethod.GET)
     public String category(Model model, @PathVariable("categoryName")String categoryName, @RequestParam("pageId")int pageId){
         List<Article> articles = articleService.getArticlesByCategory(categoryName,(pageId-1)*4,4);
+        List<ViewObject> vos = new ArrayList<>();
+        for (Article article:articles){
+            ViewObject vo = new ViewObject();
+            List<Tag> tags = tagService.getTagByArticleId(article.getId());
+            vo.set("article",article);
+            vo.set("tags",tags);
+            vos.add(vo);
+        }
+        model.addAttribute("vos",vos);
+
+
         ViewObject pagination = new ViewObject();
         int count = articleService.getArticleCountByCategory(categoryName);
 
@@ -114,7 +134,6 @@ public class ArticleController {
 
         List<Tag> tags = tagService.getAllTag();
         model.addAttribute("tags",tags);
-        model.addAttribute("articles",articles);
         model.addAttribute("pagination",pagination);
         model.addAttribute("category",categoryName);
         return "category";
@@ -122,8 +141,17 @@ public class ArticleController {
 
     @RequestMapping(value = "/tag/{tagId}",method = RequestMethod.GET)
     public String tag(Model model, @PathVariable("tagId")int tagId, @RequestParam("pageId")int pageId){
-
         List<Article> articles = articleService.getArticlesByTag(tagId,(pageId-1)*4,4);
+        List<ViewObject> vos = new ArrayList<>();
+        for (Article article:articles){
+            ViewObject vo = new ViewObject();
+            List<Tag> tags = tagService.getTagByArticleId(article.getId());
+            vo.set("article",article);
+            vo.set("tags",tags);
+            vos.add(vo);
+        }
+        model.addAttribute("vos",vos);
+
         ViewObject pagination = new ViewObject();
         int count = articleService.getArticleCountByTag(tagId);
 
@@ -141,7 +169,6 @@ public class ArticleController {
 
         List<Tag> tags = tagService.getAllTag();
         model.addAttribute("tags",tags);
-        model.addAttribute("articles",articles);
         model.addAttribute("pagination",pagination);
         model.addAttribute("tagId",tagId);
         return "tag";

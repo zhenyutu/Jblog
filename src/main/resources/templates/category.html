@@ -5,23 +5,27 @@
       <div class="col-md-8 row">
         <div class="col-md-9 leftSection">
           <ul class="articles">
-            #foreach($article in $articles)
-              <li class="blogAticle">
-                <div class="articleHeader">
-                  <p><a href="/article/$!{article.id}">$!{article.title}</a></p>
-                </div>
-                <div class="articleContent">
-                  <p>$!{article.describes}</p>
-                </div>
-                <div class="articleFooter">
-                  <ul>
-                    <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>$date.format('yyyy-MM-dd', $!{article.createdDate})</span></li>
-                    <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>$!{}</span></li>
-                    <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i><span>$!{}</span></li>
-                    <li class="readMore"><a href="/article/$!{article.id}">read more</a></li>
-                  </ul>
-                </div>
-              </li>
+            #foreach($vo in $vos)
+            <li class="blogAticle">
+              <div class="articleHeader">
+                <p><a href="/article/$!{vo.article.id}">$!{vo.article.title}</a></p>
+              </div>
+              <div class="articleContent">
+                <p>$!{vo.article.describes}</p>
+              </div>
+              <div class="articleFooter">
+                <ul>
+                  <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>$date.format('yyyy-MM-dd', $!{vo.article.createdDate})</span></li>
+                  <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>$!{vo.article.category}</span></li>
+                  <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i>
+                    #foreach($tag in $vo.tags)
+                    <span>$!{tag.name}</span>
+                    #end
+                  </li>
+                  <li class="readMore"><a href="/article/$!{vo.article.id}">read more</a></li>
+                </ul>
+              </div>
+            </li>
             #end
           </ul>
           <div class="paginationWapper">
@@ -63,7 +67,7 @@
               <li><a href="/category/Web?pageId=1">Web</a><span>(0)</span></li>
               <li><a href="/category/Linux?pageId=1">Linux</a><span>(0)</span></li>
               <li><a href="/category/分布式系统?pageId=1">分布式系统</a><span>(0)</span></li>
-              <li><a href="category/数据库?pageId=1">数据库</a><span>(0)</span></li>
+              <li><a href="/category/数据库?pageId=1">数据库</a><span>(0)</span></li>
               <li><a href="/category/算法?pageId=1">算法</a><span>(0)</span></li>
               <li><a href="/category/其它?pageId=1">其它</a><span>(0)</span></li>
             </ul>
@@ -76,12 +80,10 @@
               #end
             </div>
           </div>
-          <div class="side recentArticles">
-            <div class="header"><i class="fa fa-file-text" aria-hidden="true"></i><span>RecentArticles</span></div>
+          <div class="side hotArticles">
+            <div class="header"><i class="fa fa-file-text" aria-hidden="true"></i><span>HotArticles</span></div>
             <ul>
-              {% for recentArticle in recentArticles %}
-                <li><a href="{{ url_for('article', id = recentArticle.id) }}">{{recentArticle.title}}</a></li>
-              {% endfor %}
+              <!--<li><a href="/article"></a></li>-->
             </ul>
           </div>
         </div>

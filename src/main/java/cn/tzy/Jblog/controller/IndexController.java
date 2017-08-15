@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -40,12 +41,22 @@ public class IndexController {
 
     @RequestMapping(path = {"/","/index"})
     public String index(Model model){
+        List<ViewObject> vos = new ArrayList<>();
         List<Article> articles = articleService.getLatestArticles(0,4);
+        for (Article article:articles){
+            ViewObject vo = new ViewObject();
+            List<Tag> tags = tagService.getTagByArticleId(article.getId());
+            vo.set("article",article);
+            vo.set("tags",tags);
+            vos.add(vo);
+        }
+        model.addAttribute("vos",vos);
+
         List<Tag> tags = tagService.getAllTag();
+        model.addAttribute("tags",tags);
 
         ViewObject pagination = new ViewObject();
         int count = articleService.getArticleCount();
-
         User user = hostHolder.getUser();
         if (user==null||"admin".equals(user.getRole())){
             model.addAttribute("create",1);
@@ -55,9 +66,8 @@ public class IndexController {
         pagination.set("current",1);
         pagination.set("nextPage",2);
         pagination.set("lastPage",count/4+1);
-        model.addAttribute("articles",articles);
-        model.addAttribute("tags",tags);
         model.addAttribute("pagination",pagination);
+
         return "index";
     }
 

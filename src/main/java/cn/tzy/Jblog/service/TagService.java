@@ -29,6 +29,10 @@ public class TagService {
         return tagDao.selectAll();
     }
 
+    public List<Tag> getTagByArticleId(int articleId){
+        return articleTagDao.selectByArticleId(articleId);
+    }
+
     public int addTag(Tag tag){
         return tagDao.insertTag(tag)>0?tag.getId():0;
     }

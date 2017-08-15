@@ -18,7 +18,7 @@ public interface ArticleTagDao {
     String SELECT_FIELDS = " id, " + INSERT_FIELDS;
 
     String TAG_FIELDS = " id, name, count ";
-    String ARTICLE_FIELDS = " id, title, describes, content, created_Date, comment_Count category ";
+    String ARTICLE_FIELDS = " id, title, describes, content, created_Date, comment_Count , category ";
 
     @Insert({"insert into",TABLE_NAEM,"(",INSERT_FIELDS,") values (#{articleId},#{tagId})"})
     int insertArticleTag(ArticleTag articleTag);
