@@ -13,8 +13,8 @@ import java.security.MessageDigest;
  * Created by nowcoder on 2016/7/3.
  * @author tuzhenyu
  */
-public class WendaUtil {
-    private static final Logger logger = LoggerFactory.getLogger(WendaUtil.class);
+public class JblogUtil {
+    private static final Logger logger = LoggerFactory.getLogger(JblogUtil.class);
 
     public static int ANONYMOUS_USER_ID = 3;
 

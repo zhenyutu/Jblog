@@ -3,7 +3,7 @@ package cn.tzy.Jblog.controller;
 import cn.tzy.Jblog.model.*;
 import cn.tzy.Jblog.service.ArticleService;
 import cn.tzy.Jblog.service.TagService;
-import cn.tzy.Jblog.util.WendaUtil;
+import cn.tzy.Jblog.util.JblogUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -73,7 +73,7 @@ public class ArticleController {
         article.setDescribes(describe);
         article.setCreatedDate(new Date());
         article.setCommentCount(0);
-        article.setContent(WendaUtil.tranfer(content));
+        article.setContent(JblogUtil.tranfer(content));
         article.setCategory(category);
         int articleId = articleService.addArticle(article);
 

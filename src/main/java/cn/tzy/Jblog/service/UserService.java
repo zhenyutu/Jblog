@@ -4,7 +4,7 @@ import cn.tzy.Jblog.dao.LoginTicketDao;
 import cn.tzy.Jblog.dao.UserDao;
 import cn.tzy.Jblog.model.LoginTicket;
 import cn.tzy.Jblog.model.User;
-import cn.tzy.Jblog.util.WendaUtil;
+import cn.tzy.Jblog.util.JblogUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -58,7 +58,7 @@ public class UserService {
         user.setName(username);
         user.setSalt(UUID.randomUUID().toString().substring(0,5));
         user.setHeadUrl(String.format("https://images.nowcoder.com/head/%dm.png",random.nextInt(1000)));
-        user.setPassword(WendaUtil.MD5(password+user.getSalt()));
+        user.setPassword(JblogUtil.MD5(password+user.getSalt()));
         user.setRole("user");
         userDao.insertUser(user);
 
@@ -87,7 +87,7 @@ public class UserService {
             return map;
         }
 
-        if (!WendaUtil.MD5(password+u.getSalt()).equals(u.getPassword())){
+        if (!JblogUtil.MD5(password+u.getSalt()).equals(u.getPassword())){
             map.put("msg","密码错误");
             return map;
         }
