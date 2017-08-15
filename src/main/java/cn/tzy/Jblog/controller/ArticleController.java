@@ -173,4 +173,13 @@ public class ArticleController {
         model.addAttribute("tagId",tagId);
         return "tag";
     }
+
+    @RequestMapping("/article/{articleId}")
+    public String singleArticle(Model model, @PathVariable("articleId")int articleId){
+        Article article = articleService.getArticleById(articleId);
+        List<Tag> tags = tagService.getTagByArticleId(article.getId());
+        model.addAttribute("article",article);
+        model.addAttribute("tags",tags);
+        return "article";
+    }
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="../css/bootstrap-tokenfield.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/editormd.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="row">
+  <div class="col-md-2 col-md-offset-2 row logo"><a href="#">tuzhenyu</a></div>
+  <div class="col-md-4 col-md-offset-4 navigation">
+    <ul class="row">
+      <li class="col-md-2"><a id="home" href="/index"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+      <li class="col-md-2"><a id="project" href="/project"><i class="fa fa-server" aria-hidden="true"></i>Project</a></li>
+      <li class="col-md-2"><a id="life" href="/life"><i class="fa fa-gavel" aria-hidden="true"></i>Life</a></li>
+      <li class="col-md-2"><a id="about" href="/about"><i class="fa fa-th-large" aria-hidden="true"></i>About</a></li>
+      #if($create > 0)
+      <li class="col-md-2"><a id="create" href="/create"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
+      #end
+    </ul>
+  </div>
+</header>
+  <div class="articleContant">
+    <div class="wrapper row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 row articleShow">
+        <h1>$!{article.title}</h1>
+        <div class="articleFooter articleHead">
+          <ul>
+            <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>$date.format('yyyy-MM-dd', $!{article.createdDate})</span></li>
+            <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>$!{article.category}</span></li>
+            <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i>
+              #foreach($tag in $tags)
+              <span>$!{tag.name}</span>
+              #end
+            </li>
+          </ul>
+        </div>
+        <hr>
+        <article class="article">$!{article.content}
+        </article>
+      </div>
+    </div>
+  </div>
+#parse("footer.html")
