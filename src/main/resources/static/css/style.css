@@ -93,17 +93,17 @@ header{
   margin-right: 12px;
 }
 .articleFooter ul li span{
-  color:#bbb;
-  font-size: 16px;
+  color:#aaa;
+  font-size: 15px;
 }
 .articleFooter ul li i{
   margin-right: 7px;
-  font-size: 18px;
+  font-size: 15px;
 }
 .readMore{
   float: right;
   color: #4d6dad;
-  font-size: 16px;
+  font-size: 15px;
 
 }
 .readMore a{
