@@ -8,14 +8,28 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.security.MessageDigest;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by nowcoder on 2016/7/3.
  * @author tuzhenyu
  */
 public class JblogUtil {
+    public static Map<String,String> categoryMap;
+    static {
+        categoryMap = new HashMap<>();
+        categoryMap.put("Java","Java");
+        categoryMap.put("Web","Web");
+        categoryMap.put("Linux","Linux");
+        categoryMap.put("分布式系统","Distributed");
+        categoryMap.put("数据库","Database");
+        categoryMap.put("算法","Algorithm");
+        categoryMap.put("其它","Other");
+    }
     private static final Logger logger = LoggerFactory.getLogger(JblogUtil.class);
 
+    public static String[] categorys = {"Java","Web","Linux","分布式系统","数据库","算法","其它"};
     public static int ANONYMOUS_USER_ID = 3;
 
     public static String getJSONString(int code,String msg){

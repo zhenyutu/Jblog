@@ -2,8 +2,11 @@ package cn.tzy.Jblog.controller;
 
 import cn.tzy.Jblog.model.*;
 import cn.tzy.Jblog.service.ArticleService;
+import cn.tzy.Jblog.service.JedisService;
 import cn.tzy.Jblog.service.TagService;
 import cn.tzy.Jblog.service.UserService;
+import cn.tzy.Jblog.util.JblogUtil;
+import cn.tzy.Jblog.util.RedisKeyUntil;
 import com.sun.javafx.binding.StringFormatter;
 import com.sun.javafx.sg.prism.NGShape;
 import org.apache.commons.lang.StringUtils;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.text.html.ObjectView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -38,6 +42,9 @@ public class IndexController {
 
     @Autowired
     private HostHolder hostHolder;
+
+    @Autowired
+    private JedisService jedisService;
 
     @RequestMapping(path = {"/","/index"})
     public String index(Model model){
@@ -67,6 +74,16 @@ public class IndexController {
         pagination.set("nextPage",2);
         pagination.set("lastPage",count/4+1);
         model.addAttribute("pagination",pagination);
+
+        ViewObject categoryCount = new ViewObject();
+        for (String category: JblogUtil.categorys){
+            String num = jedisService.get(category);
+            if (num!=null)
+                categoryCount.set(JblogUtil.categoryMap.get(category),num);
+            else
+                categoryCount.set(JblogUtil.categoryMap.get(category),0);
+        }
+        model.addAttribute("categoryCount",categoryCount);
 
         return "index";
     }

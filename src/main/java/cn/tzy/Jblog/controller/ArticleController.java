@@ -2,8 +2,10 @@ package cn.tzy.Jblog.controller;
 
 import cn.tzy.Jblog.model.*;
 import cn.tzy.Jblog.service.ArticleService;
+import cn.tzy.Jblog.service.JedisService;
 import cn.tzy.Jblog.service.TagService;
 import cn.tzy.Jblog.util.JblogUtil;
+import cn.tzy.Jblog.util.RedisKeyUntil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import redis.clients.jedis.Jedis;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -30,6 +33,9 @@ public class ArticleController {
 
     @Autowired
     private HostHolder hostHolder;
+
+    @Autowired
+    private JedisService jedisService;
 
     @RequestMapping(path = "/page/{pageId}")
     public String article(Model model, @PathVariable("pageId")int pageId){
@@ -61,6 +67,17 @@ public class ArticleController {
         List<Tag> tags = tagService.getAllTag();
         model.addAttribute("tags",tags);
         model.addAttribute("pagination",pagination);
+
+        ViewObject categoryCount = new ViewObject();
+        for (String category: JblogUtil.categorys){
+            String num = jedisService.get(category);
+            if (num!=null)
+                categoryCount.set(JblogUtil.categoryMap.get(category),num);
+            else
+                categoryCount.set(JblogUtil.categoryMap.get(category),0);
+        }
+        model.addAttribute("categoryCount",categoryCount);
+
         return "index";
     }
 
@@ -100,6 +117,8 @@ public class ArticleController {
             }
         }
 
+        jedisService.incr(category);
+
         return "redirect:/";
     }
 
@@ -136,6 +155,16 @@ public class ArticleController {
         model.addAttribute("tags",tags);
         model.addAttribute("pagination",pagination);
         model.addAttribute("category",categoryName);
+
+        ViewObject categoryCount = new ViewObject();
+        for (String category: JblogUtil.categorys){
+            String num = jedisService.get(category);
+            if (num!=null)
+                categoryCount.set(JblogUtil.categoryMap.get(category),num);
+            else
+                categoryCount.set(JblogUtil.categoryMap.get(category),0);
+        }
+        model.addAttribute("categoryCount",categoryCount);
         return "category";
     }
 
@@ -171,6 +200,16 @@ public class ArticleController {
         model.addAttribute("tags",tags);
         model.addAttribute("pagination",pagination);
         model.addAttribute("tagId",tagId);
+
+        ViewObject categoryCount = new ViewObject();
+        for (String category: JblogUtil.categorys){
+            String num = jedisService.get(category);
+            if (num!=null)
+                categoryCount.set(JblogUtil.categoryMap.get(category),num);
+            else
+                categoryCount.set(JblogUtil.categoryMap.get(category),0);
+        }
+        model.addAttribute("categoryCount",categoryCount);
         return "tag";
     }
 
