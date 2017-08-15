@@ -1,10 +1,8 @@
 package cn.tzy.Jblog.controller;
 
-import cn.tzy.Jblog.model.Article;
-import cn.tzy.Jblog.model.HostHolder;
-import cn.tzy.Jblog.model.User;
-import cn.tzy.Jblog.model.ViewObject;
+import cn.tzy.Jblog.model.*;
 import cn.tzy.Jblog.service.ArticleService;
+import cn.tzy.Jblog.service.TagService;
 import cn.tzy.Jblog.service.UserService;
 import com.sun.javafx.binding.StringFormatter;
 import com.sun.javafx.sg.prism.NGShape;
@@ -35,11 +33,15 @@ public class IndexController {
     private UserService userService;
 
     @Autowired
+    private TagService tagService;
+
+    @Autowired
     private HostHolder hostHolder;
 
     @RequestMapping(path = {"/","/index"})
     public String index(Model model){
         List<Article> articles = articleService.getLatestArticles(0,4);
+        List<Tag> tags = tagService.getAllTag();
 
         ViewObject pagination = new ViewObject();
         int count = articleService.getArticleCount();
@@ -54,6 +56,7 @@ public class IndexController {
         pagination.set("nextPage",2);
         pagination.set("lastPage",count/4+1);
         model.addAttribute("articles",articles);
+        model.addAttribute("tags",tags);
         model.addAttribute("pagination",pagination);
         return "index";
     }

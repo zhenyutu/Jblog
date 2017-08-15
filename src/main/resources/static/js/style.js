@@ -38,4 +38,11 @@ $(function () {
         saveHTMLToTextarea : true
     });
 
+    $('#tagCloud a').tagcloud();
+
 });
+
+$.fn.tagcloud.defaults = {
+    size: {start: 10, end: 18, unit: 'pt'},
+    color: {start: '#aaa', end: '#555'}
+};

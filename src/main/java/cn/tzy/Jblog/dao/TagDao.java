@@ -4,6 +4,8 @@ import cn.tzy.Jblog.model.Article;
 import cn.tzy.Jblog.model.Tag;
 import org.apache.ibatis.annotations.*;
 
+import java.util.List;
+
 /**
  * Created by tuzhenyu on 17-8-14.
  * @author tuzhenyu
@@ -19,6 +21,9 @@ public interface TagDao {
 
     @Select({"select",SELECT_FIELDS,"from",TABLE_NAEM,"where name=#{name}"})
     Tag selectByName(String name);
+
+    @Select({"select",SELECT_FIELDS,"from",TABLE_NAEM})
+    List<Tag> selectAll();
 
     @Select({"select count(id) from",TABLE_NAEM})
     int getTagCount();

@@ -7,6 +7,8 @@ import cn.tzy.Jblog.model.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by tuzhenyu on 17-8-14.
  * @author tuzhenyu
@@ -21,6 +23,10 @@ public class TagService {
 
     public Tag selectByName(String name){
         return tagDao.selectByName(name);
+    }
+
+    public List<Tag> getAllTag(){
+        return tagDao.selectAll();
     }
 
     public int addTag(Tag tag){

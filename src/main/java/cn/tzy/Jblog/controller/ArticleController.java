@@ -48,6 +48,8 @@ public class ArticleController {
             model.addAttribute("create",0);
         }
 
+        List<Tag> tags = tagService.getAllTag();
+        model.addAttribute("tags",tags);
         model.addAttribute("articles",articles);
         model.addAttribute("pagination",pagination);
         return "index";
@@ -110,6 +112,8 @@ public class ArticleController {
             model.addAttribute("create",0);
         }
 
+        List<Tag> tags = tagService.getAllTag();
+        model.addAttribute("tags",tags);
         model.addAttribute("articles",articles);
         model.addAttribute("pagination",pagination);
         model.addAttribute("category",categoryName);

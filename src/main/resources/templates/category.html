@@ -70,17 +70,11 @@
           </div>
           <div class="side tags">
             <div class="header"><i class="fa fa-tags" aria-hidden="true"></i><span>Tags</span></div>
-            <ul>
-              {% for tag in tags %}
-                {% if loop.index0%3==0 %}
-                  <li class="row">
-                    <div class="col-md-4"><a href="{{ url_for('Tag', kind = tags[loop.index0], page = p) }}">{{tags[loop.index0]}}</a></div>
-                    <div class="col-md-4"><a href="{{ url_for('Tag', kind = tags[loop.index0+1], page = p) }}">{{tags[loop.index0+1]}}</a></div>
-                    <div class="col-md-4"><a href="{{ url_for('Tag', kind = tags[loop.index0+2], page = p) }}">{{tags[loop.index0+2]}}</a></div>
-                  </li>
-                {% endif %}
-              {% endfor %}
-            </ul>
+            <div id="tagCloud">
+              #foreach($tag in $tags)
+              <a href="/tag/$!{tag.name}?pageId=1" rel="$!{tag.count}">$!{tag.name}</a>
+              #end
+            </div>
           </div>
           <div class="side recentArticles">
             <div class="header"><i class="fa fa-file-text" aria-hidden="true"></i><span>RecentArticles</span></div>
