@@ -28,7 +28,7 @@
             <ul class="pagination">
               #if($pagination.current > 1)
               <li>
-                <a href="/page/$!{pagination.prePage}">&laquo;</a>
+                <a href="/category/$!{category}?pageId=$!{pagination.prePage}">&laquo;</a>
               </li>
               #else
               <li class="disabled">
@@ -45,7 +45,7 @@
               <!--{% endfor %}-->
               #if($pagination.current < $pagination.lastPage)
               <li>
-                <a href="/page/$!{pagination.nextPage}">&raquo;</a>
+                <a href="/category/$!{category}?pageId=$!{pagination.nextPage}">&raquo;</a>
               </li>
               #else
               <li class="disabled">

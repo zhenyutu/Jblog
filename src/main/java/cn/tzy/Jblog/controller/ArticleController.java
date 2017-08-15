@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
@@ -89,5 +90,29 @@ public class ArticleController {
         }
 
         return "redirect:/";
+    }
+
+    @RequestMapping(value = "/category/{categoryName}",method = RequestMethod.GET)
+    public String category(Model model, @PathVariable("categoryName")String categoryName, @RequestParam("pageId")int pageId){
+        List<Article> articles = articleService.getArticlesByCategory(categoryName,(pageId-1)*4,4);
+        ViewObject pagination = new ViewObject();
+        int count = articleService.getArticleCountByCategory(categoryName);
+
+        pagination.set("current",pageId);
+        pagination.set("nextPage",pageId+1);
+        pagination.set("prePage",pageId-1);
+        pagination.set("lastPage",count/4+1);
+
+        User user = hostHolder.getUser();
+        if (user==null||"admin".equals(user.getRole())){
+            model.addAttribute("create",1);
+        }else {
+            model.addAttribute("create",0);
+        }
+
+        model.addAttribute("articles",articles);
+        model.addAttribute("pagination",pagination);
+        model.addAttribute("category",categoryName);
+        return "category";
     }
 }

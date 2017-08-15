@@ -25,6 +25,12 @@ public interface ArticleDao {
     @Select({"select",SELECT_FIELDS,"from",TABLE_NAEM,"order by id desc limit #{offset},#{limit}"})
     List<Article> selectLatestArticles(@Param("offset") int offset, @Param("limit") int limit);
 
+    @Select({"select",SELECT_FIELDS,"from",TABLE_NAEM,"where category=#{category} order by id desc limit #{offset},#{limit}"})
+    List<Article> selecttArticlesByCategory(@Param("category") String category,@Param("offset") int offset, @Param("limit") int limit);
+
+    @Select({"select count(id) from",TABLE_NAEM,"where category=#{category}"})
+    int getArticleCountByCategory(@Param("category") String category);
+
     @Select({"select count(id) from",TABLE_NAEM})
     int getArticleCount();
 

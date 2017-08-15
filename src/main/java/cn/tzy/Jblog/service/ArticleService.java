@@ -28,8 +28,16 @@ public class ArticleService {
         return articleDao.getArticleCount();
     }
 
+    public int getArticleCountByCategory(String category){
+        return articleDao.getArticleCountByCategory(category);
+    }
+
     public List<Article> getLatestArticles(int offset, int limit){
         return articleDao.selectLatestArticles(offset,limit);
+    }
+
+    public List<Article> getArticlesByCategory(String category,int offset, int limit){
+        return articleDao.selecttArticlesByCategory(category,offset,limit);
     }
 
     public void updateCommentCount(int id,int count){
