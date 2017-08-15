@@ -161,6 +161,11 @@ header{
 .side ul li a{
   color: #4d6dad;
 }
+
+.categories ul li span{
+  float: right;
+  margin-right: 20px;
+}
 /*×××××××××××××××××　create.html　×××××××××××××××××××*/
 .articleEdit form input{
   background-color: #fff;
