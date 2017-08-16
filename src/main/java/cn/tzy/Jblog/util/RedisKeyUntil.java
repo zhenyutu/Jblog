@@ -11,7 +11,7 @@ public class RedisKeyUntil {
     private static String BIZ_CATEGORY = "CATEGORY";
 
     public static String getCategoryKey(String category){
-        return BIZ_CATEGORY+SPLITE+category.toUpperCase()+SPLITE+"COUNT";
+        return BIZ_CATEGORY+SPLITE+category+SPLITE+"COUNT";
     }
 
 

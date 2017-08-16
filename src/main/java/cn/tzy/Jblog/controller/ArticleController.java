@@ -70,7 +70,8 @@ public class ArticleController {
 
         ViewObject categoryCount = new ViewObject();
         for (String category: JblogUtil.categorys){
-            String num = jedisService.get(category);
+            String categoryKey = RedisKeyUntil.getCategoryKey(category);
+            String num = jedisService.get(categoryKey);
             if (num!=null)
                 categoryCount.set(JblogUtil.categoryMap.get(category),num);
             else
@@ -117,7 +118,8 @@ public class ArticleController {
             }
         }
 
-        jedisService.incr(category);
+        String categoryKey = RedisKeyUntil.getCategoryKey(category);
+        jedisService.incr(categoryKey);
 
         return "redirect:/";
     }
@@ -158,7 +160,8 @@ public class ArticleController {
 
         ViewObject categoryCount = new ViewObject();
         for (String category: JblogUtil.categorys){
-            String num = jedisService.get(category);
+            String categoryKey = RedisKeyUntil.getCategoryKey(category);
+            String num = jedisService.get(categoryKey);
             if (num!=null)
                 categoryCount.set(JblogUtil.categoryMap.get(category),num);
             else
@@ -203,7 +206,8 @@ public class ArticleController {
 
         ViewObject categoryCount = new ViewObject();
         for (String category: JblogUtil.categorys){
-            String num = jedisService.get(category);
+            String categoryKey = RedisKeyUntil.getCategoryKey(category);
+            String num = jedisService.get(categoryKey);
             if (num!=null)
                 categoryCount.set(JblogUtil.categoryMap.get(category),num);
             else
