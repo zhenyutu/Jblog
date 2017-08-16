@@ -53,6 +53,10 @@ public class IndexController {
         for (Article article:articles){
             ViewObject vo = new ViewObject();
             List<Tag> tags = tagService.getTagByArticleId(article.getId());
+            String clickCount = jedisService.get(RedisKeyUntil.getClickCountKey("/article/"+article.getId()));
+            if (clickCount==null)
+                clickCount = "0";
+            vo.set("clickCount",clickCount);
             vo.set("article",article);
             vo.set("tags",tags);
             vos.add(vo);

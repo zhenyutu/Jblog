@@ -16,6 +16,7 @@
                 <div class="articleFooter">
                   <ul>
                     <li><i class="fa fa-calendar" aria-hidden="true"></i><span>$date.format('yyyy-MM-dd', $!{vo.article.createdDate})</span></li>
+                    <li><i class="fa fa-eye" aria-hidden="true"></i><span>$!{vo.clickCount}</span></li>
                     <li><i class="fa fa-list" aria-hidden="true"></i><span>$!{vo.article.category}</span></li>
                     <li><i class="fa fa-tags" aria-hidden="true"></i>
                       #foreach($tag in $vo.tags)

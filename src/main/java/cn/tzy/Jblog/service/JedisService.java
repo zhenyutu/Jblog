@@ -116,7 +116,13 @@ public class JedisService implements InitializingBean{
         return result;
     }
 
+    public double zincrby(String key,String value){
+        Jedis jedis = pool.getResource();
+        double result = jedis.zincrby(key,1,value);
+        jedis.close();
 
+        return result;
+    }
 
     public Set<String> zrevrange(String key,int start, int end){
         Jedis jedis = pool.getResource();
