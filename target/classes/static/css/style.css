@@ -280,6 +280,31 @@ header{
   margin-bottom: 20px;
 }
 
+.likeDisLike{
+  width: 200px;
+  height: 80px;
+}
+.like{
+  height:100%;
+  width: 80px;
+  float: left;
+  background-color: #f7f7f7;
+}
+.dislike{
+  height:100%;
+  width: 80px;
+  float: right;
+}
+.like a,.dislike a{
+  color: #aaa;
+}
+.like a:hover,.dislike a:hover{
+  color: #337ab7;
+}
+.likeCount,.disLikeCount{
+  margin-top: 10px;
+}
+
 /*×××××××××××××××××　footer.html　×××××××××××××××××××*/
 footer{
   width: 100%;

@@ -43,6 +43,27 @@
         <hr>
         <article class="article">$!{article.content}</article>
         <hr>
+        <div class="likeWrapper row">
+          <div class="col-md-3 col-md-offset-5 likeDisLike">
+            <div class="like">
+              #if($liked > 0)
+              <div><a style="color:#337ab7;"><i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i></a></div>
+              #else
+              <div><a href="/like"><i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i></a></div>
+              #end
+              <div class="likeCount">赞(11)</div>
+            </div>
+            <div class="dislike">
+              #if($liked > 0)
+              <div><a style="color:#337ab7;"><i class="fa fa-thumbs-o-down fa-3x" aria-hidden="true"></i></a></div>
+              #else
+              <div><a href="/dislike"><i class="fa fa-thumbs-o-down fa-3x" aria-hidden="true"></i></a></div>
+              #end
+              <div class="disLikeCount">踩(11)</div>
+            </div>
+          </div>
+        </div>
+        <hr>
         <div class="title"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i><span>已有3条评论</span></div>
         <hr>
         <div class="commentList">
