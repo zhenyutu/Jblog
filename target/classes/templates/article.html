@@ -64,42 +64,28 @@
           </div>
         </div>
         <hr>
-        <div class="title"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i><span>已有3条评论</span></div>
+        <div class="title"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i><span>已有$!{commentsCount}条评论</span></div>
         <hr>
         <div class="commentList">
           <ul>
+            #foreach($vo in $vos)
             <li>
               <div class="comment">
                 <div class="commentTop row">
                   <div class="commentLeft col-md-1">
-                    <div class="photo"><a href=""><img src="https://images.nowcoder.com/head/349m.png" alt=""></a></div>
-                    <div class="comment-author">tuzhenyu</div>
+                    <div class="photo"><a href=""><img src="$!{vo.user.headUrl}" alt=""></a></div>
+                    <div class="comment-author">$!{vo.user.name}</div>
                   </div>
-                  <div class="commentContent col-md-9"><span>每一个程序员上辈子都是断了引脚的 CPU！！！</span></div>
+                  <div class="commentContent col-md-9"><span>$!{vo.comment.content}</span></div>
                 </div>
                 <div class="commentFooter">
-                  <div class="commentDate"><span>发布于 2017-07-23 17:49:26</span></div>
+                  <div class="commentDate"><span>发布于 $date.format('yyyy-MM-dd HH:mm:ss', $!{vo.comment.createdDate})</span></div>
                   <div class="answer"><a href="">回复</a></div>
                 </div>
               </div>
             </li>
             <hr>
-            <li>
-              <div class="comment">
-                <div class="commentTop row">
-                  <div class="commentLeft col-md-1">
-                    <div class="photo"><a href=""><img src="https://images.nowcoder.com/head/349m.png" alt=""></a></div>
-                    <div class="comment-author"><span>tuzhenyu</span></div>
-                  </div>
-                  <div class="commentContent col-md-9"><span>每一个程序员上辈子都是断了引脚的 CPU！！！</span></div>
-                </div>
-                <div class="commentFooter">
-                  <div class="commentDate"><span>发布于 2017-07-23 17:49:26</span></div>
-                  <div class="answer"><a href="">回复</a></div>
-                </div>
-              </div>
-            </li>
-            <hr>
+            #end
           </ul>
         </div>
         <div class="title"><i class="fa fa-edit fa-2x" aria-hidden="true"></i><span>添加新评论</span></div>

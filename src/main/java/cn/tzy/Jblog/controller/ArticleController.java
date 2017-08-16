@@ -1,10 +1,7 @@
 package cn.tzy.Jblog.controller;
 
 import cn.tzy.Jblog.model.*;
-import cn.tzy.Jblog.service.ArticleService;
-import cn.tzy.Jblog.service.JedisService;
-import cn.tzy.Jblog.service.LikeService;
-import cn.tzy.Jblog.service.TagService;
+import cn.tzy.Jblog.service.*;
 import cn.tzy.Jblog.util.JblogUtil;
 import cn.tzy.Jblog.util.RedisKeyUntil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +27,16 @@ public class ArticleController {
     private ArticleService articleService;
 
     @Autowired
+    private CommentService commentService;
+
+    @Autowired
     private LikeService likeService;
 
     @Autowired
     private TagService tagService;
+
+    @Autowired
+    private UserService userService;
 
     @Autowired
     private HostHolder hostHolder;
@@ -303,6 +306,17 @@ public class ArticleController {
             model.addAttribute("liked",likeService.getLikeStatus(hostHolder.getUser().getId(),articleId));
         model.addAttribute("likeCount",likeService.getLikeCount(articleId));
         model.addAttribute("dislikeCount",likeService.getDislikeCount(articleId));
+
+        List<Comment> comments = commentService.getCommentsByArticleId(articleId);
+        List<ViewObject> vos = new ArrayList<>();
+        for (Comment comment: comments){
+            ViewObject vo = new ViewObject();
+            vo.set("comment",comment);
+            vo.set("user",userService.getUser(comment.getUserId()));
+            vos.add(vo);
+        }
+        model.addAttribute("vos",vos);
+        model.addAttribute("commentsCount",comments.size());
 
         return "article";
     }
