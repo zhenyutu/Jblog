@@ -54,3 +54,16 @@ CREATE TABLE `article_tag` (
   `tag_id` INT NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+#评论表
+DROP TABLE IF EXISTS `comment`;
+CREATE TABLE `comment` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `content` TEXT NOT NULL,
+  `user_id` INT NOT NULL,
+  `article_id` INT NOT NULL,
+  `created_date` DATETIME NOT NULL,
+  `status` INT NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  INDEX `article_id` (`article_id` ASC)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
