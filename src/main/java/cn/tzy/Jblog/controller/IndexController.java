@@ -24,6 +24,7 @@ import javax.swing.text.html.ObjectView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by tuzhenyu on 17-8-13.
@@ -100,6 +101,15 @@ public class IndexController {
         clickCount.set("currentPage",currentPage);
         clickCount.set("sumPage",sumPage);
         model.addAttribute("clickCount",clickCount);
+
+        List<Article> hotArticles = new ArrayList<>();
+        Set<String> set = jedisService.zrevrange("hotArticles",0,6);
+        for (String str : set){
+            int articleId = Integer.parseInt(str.split(":")[1]);
+            Article article = articleService.getArticleById(articleId);
+            hotArticles.add(article);
+        }
+        model.addAttribute("hotArticles",hotArticles);
 
         return "index";
     }

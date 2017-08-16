@@ -18,6 +18,7 @@ import redis.clients.jedis.Jedis;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by tuzhenyu on 17-8-14.
@@ -90,10 +91,19 @@ public class ArticleController {
         clickCount.set("sumPage",sumPage);
         model.addAttribute("clickCount",clickCount);
 
+        List<Article> hotArticles = new ArrayList<>();
+        Set<String> set = jedisService.zrevrange("hotArticles",0,6);
+        for (String str : set){
+            int articleId = Integer.parseInt(str.split(":")[1]);
+            Article article = articleService.getArticleById(articleId);
+            hotArticles.add(article);
+        }
+        model.addAttribute("hotArticles",hotArticles);
+
         return "index";
     }
 
-    @RequestMapping("/article/add")
+    @RequestMapping("/articleAdd")
     public String addArticle(@RequestParam("title")String title,@RequestParam("category")String category,
                              @RequestParam("tag")String tag,@RequestParam("describe")String describe,
                              @RequestParam("content")String content){
@@ -191,6 +201,15 @@ public class ArticleController {
         clickCount.set("sumPage",sumPage);
         model.addAttribute("clickCount",clickCount);
 
+        List<Article> hotArticles = new ArrayList<>();
+        Set<String> set = jedisService.zrevrange("hotArticles",0,6);
+        for (String str : set){
+            int articleId = Integer.parseInt(str.split(":")[1]);
+            Article article = articleService.getArticleById(articleId);
+            hotArticles.add(article);
+        }
+        model.addAttribute("hotArticles",hotArticles);
+
         return "category";
     }
 
@@ -248,6 +267,15 @@ public class ArticleController {
         clickCount.set("currentPage",currentPage);
         clickCount.set("sumPage",sumPage);
         model.addAttribute("clickCount",clickCount);
+
+        List<Article> hotArticles = new ArrayList<>();
+        Set<String> set = jedisService.zrevrange("hotArticles",0,6);
+        for (String str : set){
+            int articleId = Integer.parseInt(str.split(":")[1]);
+            Article article = articleService.getArticleById(articleId);
+            hotArticles.add(article);
+        }
+        model.addAttribute("hotArticles",hotArticles);
 
         return "tag";
     }

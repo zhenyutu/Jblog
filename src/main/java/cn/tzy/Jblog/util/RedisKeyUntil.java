@@ -25,4 +25,8 @@ public class RedisKeyUntil {
     }
 
 
+    public static void main(String[] args) {
+        String str = "前端学习笔记(3)-DOM 基础前端学";
+        System.out.println(str.length());
+    }
 }

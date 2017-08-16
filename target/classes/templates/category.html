@@ -83,7 +83,15 @@
           <div class="side hotArticles">
             <div class="header"><i class="fa fa-file-text" aria-hidden="true"></i><span>HotArticles</span></div>
             <ul>
-              <!--<li><a href="/article"></a></li>-->
+              #foreach($hotArticle in $hotArticles)
+              #set($str=$!hotArticle.title)
+              #if($str.length()>19)
+              #set($str=$str.substring(0,19))
+              <li><a href="/article/$!{hotArticle.id}">$str...</a></li>
+              #else
+              <li><a href="/article/$!{hotArticle.id}">$str</a></li>
+              #end
+              #end
             </ul>
           </div>
         </div>
