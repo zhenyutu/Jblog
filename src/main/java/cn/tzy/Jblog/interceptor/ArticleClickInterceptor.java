@@ -23,7 +23,6 @@ public class ArticleClickInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         String uri = httpServletRequest.getServletPath().split("/")[2];
-        System.out.println(uri);
         String uriKey = RedisKeyUntil.getClickCountKey(uri);
         jedisService.zincrby("hotArticles",uriKey);
         return true;
