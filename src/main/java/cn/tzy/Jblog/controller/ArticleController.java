@@ -79,6 +79,13 @@ public class ArticleController {
         }
         model.addAttribute("categoryCount",categoryCount);
 
+        ViewObject clickCount = new ViewObject();
+        String currentPage = jedisService.get(RedisKeyUntil.getClickCountKey("/page/"+pageId));
+        String sumPage = jedisService.get(RedisKeyUntil.getClickCountKey("SUM"));
+        clickCount.set("currentPage",currentPage);
+        clickCount.set("sumPage",sumPage);
+        model.addAttribute("clickCount",clickCount);
+
         return "index";
     }
 
@@ -168,6 +175,14 @@ public class ArticleController {
                 categoryCount.set(JblogUtil.categoryMap.get(category),0);
         }
         model.addAttribute("categoryCount",categoryCount);
+
+        ViewObject clickCount = new ViewObject();
+        String currentPage = jedisService.get(RedisKeyUntil.getClickCountKey("/category/"+categoryName));
+        String sumPage = jedisService.get(RedisKeyUntil.getClickCountKey("SUM"));
+        clickCount.set("currentPage",currentPage);
+        clickCount.set("sumPage",sumPage);
+        model.addAttribute("clickCount",clickCount);
+
         return "category";
     }
 
@@ -214,6 +229,14 @@ public class ArticleController {
                 categoryCount.set(JblogUtil.categoryMap.get(category),0);
         }
         model.addAttribute("categoryCount",categoryCount);
+
+        ViewObject clickCount = new ViewObject();
+        String currentPage = jedisService.get(RedisKeyUntil.getClickCountKey("/tag/"+tagId));
+        String sumPage = jedisService.get(RedisKeyUntil.getClickCountKey("SUM"));
+        clickCount.set("currentPage",currentPage);
+        clickCount.set("sumPage",sumPage);
+        model.addAttribute("clickCount",clickCount);
+
         return "tag";
     }
 
@@ -223,6 +246,14 @@ public class ArticleController {
         List<Tag> tags = tagService.getTagByArticleId(article.getId());
         model.addAttribute("article",article);
         model.addAttribute("tags",tags);
+
+        ViewObject clickCount = new ViewObject();
+        String currentPage = jedisService.get(RedisKeyUntil.getClickCountKey("/article/"+articleId));
+        String sumPage = jedisService.get(RedisKeyUntil.getClickCountKey("SUM"));
+        clickCount.set("currentPage",currentPage);
+        clickCount.set("sumPage",sumPage);
+        model.addAttribute("clickCount",clickCount);
+
         return "article";
     }
 }

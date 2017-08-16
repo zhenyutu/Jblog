@@ -86,6 +86,17 @@ public class IndexController {
         }
         model.addAttribute("categoryCount",categoryCount);
 
+        ViewObject clickCount = new ViewObject();
+        String countStr1 = jedisService.get(RedisKeyUntil.getClickCountKey("/"));
+        String countStr2 = jedisService.get(RedisKeyUntil.getClickCountKey("/index"));
+        String countStr3 = jedisService.get(RedisKeyUntil.getClickCountKey("/page/1"));
+        String currentPage = String.valueOf(Integer.parseInt(countStr1==null?"0":countStr1)
+                + Integer.parseInt(countStr2==null?"0":countStr2)+ Integer.parseInt(countStr3==null?"0":countStr3));
+        String sumPage = jedisService.get(RedisKeyUntil.getClickCountKey("SUM"));
+        clickCount.set("currentPage",currentPage);
+        clickCount.set("sumPage",sumPage);
+        model.addAttribute("clickCount",clickCount);
+
         return "index";
     }
 

@@ -181,26 +181,6 @@ header{
   border: 1px solid #aaa;
 }
 
-.flask-pagedown-input {
-  width: 615px;
-  height: 600px;
-  background-color: #eee;
-  border: 1px solid #aaa;
-  margin-top: 30px;
-  font-size: 16px;
-}
-
-.flask-pagedown-preview {
-  width: 615px;
-  height: 600px;
-  background-color: #e2e2e2;
-  background: url(../img/background.jpg);
-  background-repeat:repeat;
-  border: 1px solid #aaa;
-  margin-top: 30px;
-  font-size: 14px;
-}
-
 .articleSubmit button{
   width: 1260px;
   height: 40px;
@@ -242,7 +222,7 @@ header{
 }
 
 
-
+/*×××××××××××××××××　footer.html　×××××××××××××××××××*/
 footer{
   width: 100%;
   height: 80px;
@@ -252,16 +232,25 @@ footer ul{
   margin-top: 10px;
 }
 footer .fa{
-  font-size: 30px;
+  font-size: 20px;
   color: #aaa;
-  margin-right: 10px;
+  /*margin-right: 1px;*/
 }
 footer .power{
   text-align: center;
+  padding-left: 15px;
 }
 footer p{
-  font-size: 13px;
+  font-size: 14px;
   color: #ccc;
+}
+
+footer .author{
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 12px;
+  padding: 0;
+  padding-left: 15px;
 }
 
 /*×××××××××××××××××　login.html　×××××××××××××××××××*/
