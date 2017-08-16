@@ -221,6 +221,64 @@ header{
   padding-top: 15px;
 }
 
+.commentList ul{
+  list-style: none;
+  padding: 0;
+}
+
+.commentList ul li{
+  padding: 10px;
+}
+
+.comment .photo img{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+.comment-author{
+  font-size: 14px;
+  color:#666;
+}
+.commentLeft{
+  margin-right: 15px;
+}
+.commentDate{
+  float: left;
+}
+.commentFooter{
+  margin-bottom: 10px;
+}
+.commentDate{
+  float: left;
+  font-size: 14px;
+  color:#aaa;
+  margin-top: 10px;
+}
+.answer{
+   float: right;
+   margin-top: 10px;
+ }
+.editComment{
+  margin-left: 30px;
+}
+
+.title i{
+  font-size: 25px;
+  margin-right: 6px;
+}
+.title {
+  color: #6E7173;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all .1s ease-in;
+}
+.editComment button{
+  float: right;
+  margin-top: 10px;
+}
+.commentWapper{
+  margin-bottom: 20px;
+}
 
 /*×××××××××××××××××　footer.html　×××××××××××××××××××*/
 footer{

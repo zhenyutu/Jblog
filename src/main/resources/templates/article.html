@@ -41,8 +41,56 @@
           </ul>
         </div>
         <hr>
-        <article class="article">$!{article.content}
-        </article>
+        <article class="article">$!{article.content}</article>
+        <hr>
+        <div class="title"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i><span>已有3条评论</span></div>
+        <hr>
+        <div class="commentList">
+          <ul>
+            <li>
+              <div class="comment">
+                <div class="commentTop row">
+                  <div class="commentLeft col-md-1">
+                    <div class="photo"><a href=""><img src="https://images.nowcoder.com/head/349m.png" alt=""></a></div>
+                    <div class="comment-author">tuzhenyu</div>
+                  </div>
+                  <div class="commentContent col-md-9"><span>每一个程序员上辈子都是断了引脚的 CPU！！！</span></div>
+                </div>
+                <div class="commentFooter">
+                  <div class="commentDate"><span>发布于 2017-07-23 17:49:26</span></div>
+                  <div class="answer"><a href="">回复</a></div>
+                </div>
+              </div>
+            </li>
+            <hr>
+            <li>
+              <div class="comment">
+                <div class="commentTop row">
+                  <div class="commentLeft col-md-1">
+                    <div class="photo"><a href=""><img src="https://images.nowcoder.com/head/349m.png" alt=""></a></div>
+                    <div class="comment-author"><span>tuzhenyu</span></div>
+                  </div>
+                  <div class="commentContent col-md-9"><span>每一个程序员上辈子都是断了引脚的 CPU！！！</span></div>
+                </div>
+                <div class="commentFooter">
+                  <div class="commentDate"><span>发布于 2017-07-23 17:49:26</span></div>
+                  <div class="answer"><a href="">回复</a></div>
+                </div>
+              </div>
+            </li>
+            <hr>
+          </ul>
+        </div>
+        <div class="title"><i class="fa fa-edit fa-2x" aria-hidden="true"></i><span>添加新评论</span></div>
+        <hr>
+        <div class="commentWapper row">
+          <div class="editComment col-md-11">
+            <form action="/articleAdd"  method = "post">
+              <textarea name="content" id="content" style="font-style: italic;width:100%;height: 115px"></textarea>
+              <button  type="submit" class="btn btn-default">提交评论</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
