@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14bbdedc-95e8-4092-8000-7c459590c183" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/LikeController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/LikeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/ArticleController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/ArticleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/article.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="212">
-              <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+              <caret line="55" column="33" lean-forward="true" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -131,15 +135,17 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/configuration/WebConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/JedisService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/category.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/tag.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/interceptor/ArticleClickInterceptor.java" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/create.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/LikeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/LikeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/article.html" />
       </list>
     </option>
@@ -289,15 +295,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="Jblog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,6 +326,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Jblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,11 +419,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.tzy.Jblog.service" />
+      <recent name="cn.tzy.Jblog.controller" />
       <recent name="cn.tzy.Jblog.interceptor" />
       <recent name="cn.tzy.Jblog.util" />
-      <recent name="cn.tzy.Jblog.service" />
       <recent name="cn.tzy.Jblog.model" />
-      <recent name="cn.tzy.Jblog.configuration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
@@ -953,12 +989,12 @@
       <workItem from="1502670336021" duration="24051000" />
       <workItem from="1502710378884" duration="7385000" />
       <workItem from="1502755376519" duration="28325000" />
-      <workItem from="1502844846260" duration="25074000" />
+      <workItem from="1502844846260" duration="27051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95698000" />
+    <option name="totallyTimeSpent" value="97675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="18" width="1366" height="750" extended-state="6" />
@@ -982,7 +1018,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2819383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2819383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23352855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1018,24 +1054,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding>
-            <marker date="1500464935000" expanded="true" signature="184:469" ph="..." />
-            <marker date="1500464935000" expanded="true" signature="200:451" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/model/ViewObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1477,23 +1495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding>
-            <marker date="1502865924975" expanded="true" signature="28:90" ph="/**...*/" />
-            <marker date="1502865924975" expanded="false" signature="476:486" ph=" { " />
-            <marker date="1502865924975" expanded="false" signature="537:543" ph=" }" />
-            <marker date="1502865924975" expanded="false" signature="598:608" ph=" { " />
-            <marker date="1502865924975" expanded="false" signature="651:657" ph=" }" />
-            <marker date="1502865924975" expanded="false" signature="719:729" ph=" { " />
-            <marker date="1502865924975" expanded="false" signature="780:786" ph=" }" />
-            <marker date="1502865924975" expanded="true" signature="832:925" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/category.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1797,18 +1798,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1502888550251" expanded="true" signature="28:90" ph="/**...*/" />
+            <marker date="1502888550251" expanded="false" signature="527:537" ph=" { " />
+            <marker date="1502888550251" expanded="false" signature="588:594" ph=" }" />
+            <marker date="1502888550251" expanded="false" signature="649:659" ph=" { " />
+            <marker date="1502888550251" expanded="false" signature="702:708" ph=" }" />
+            <marker date="1502888550251" expanded="false" signature="770:780" ph=" { " />
+            <marker date="1502888550251" expanded="false" signature="831:837" ph=" }" />
+            <marker date="1502888550251" expanded="true" signature="889:973" ph="{...}" />
+            <marker date="1502888550251" expanded="true" signature="1028:1115" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/LikeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <marker date="1502888892607" expanded="true" signature="38:180" ph="..." />
+            <marker date="1502888892607" expanded="true" signature="182:245" ph="/**...*/" />
+            <marker date="1502888892607" expanded="true" signature="391:707" ph="{...}" />
+            <marker date="1502888892607" expanded="true" signature="755:1059" ph="{...}" />
+            <marker date="1502888892607" expanded="true" signature="1110:1414" ph="{...}" />
+            <marker date="1502888892607" expanded="true" signature="1459:1572" ph="{...}" />
+            <marker date="1502888892607" expanded="true" signature="1620:1742" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/LikeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding>
+            <marker date="1502888550143" expanded="true" signature="41:307" ph="..." />
+            <marker date="1502888550143" expanded="true" signature="309:371" ph="/**...*/" />
+            <marker date="1502888550143" expanded="true" signature="630:867" ph="{...}" />
+            <marker date="1502888550143" expanded="true" signature="986:1230" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/ArticleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="286" column="40" lean-forward="false" selection-start-line="286" selection-start-column="40" selection-end-line="286" selection-end-column="40" />
+        <state relative-caret-position="258">
+          <caret line="303" column="35" lean-forward="false" selection-start-line="303" selection-start-column="35" selection-end-line="303" selection-end-column="35" />
           <folding>
-            <marker date="1502866198103" expanded="true" signature="41:792" ph="..." />
-            <marker date="1502866198103" expanded="true" signature="794:856" ph="/**...*/" />
-            <marker date="1502866198103" expanded="true" signature="1236:3844" ph="{...}" />
-            <marker date="1502866198103" expanded="true" signature="4157:5504" ph="{...}" />
-            <marker date="1502866198103" expanded="true" signature="5713:8428" ph="{...}" />
-            <marker date="1502866198103" expanded="true" signature="8603:11266" ph="{...}" />
-            <marker date="1502866198103" expanded="true" signature="11397:12041" ph="{...}" />
+            <marker date="1502888892551" expanded="true" signature="41:799" ph="..." />
+            <marker date="1502888892551" expanded="true" signature="801:863" ph="/**...*/" />
+            <marker date="1502888892551" expanded="true" signature="1296:3904" ph="{...}" />
+            <marker date="1502888892551" expanded="true" signature="4217:5564" ph="{...}" />
+            <marker date="1502888892551" expanded="true" signature="5773:8488" ph="{...}" />
+            <marker date="1502888892551" expanded="true" signature="8663:11326" ph="{...}" />
+            <marker date="1502888892551" expanded="true" signature="11457:12465" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1816,7 +1864,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
-          <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <caret line="55" column="33" lean-forward="true" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

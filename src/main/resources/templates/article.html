@@ -49,17 +49,17 @@
               #if($liked > 0)
               <div><a style="color:#337ab7;"><i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i></a></div>
               #else
-              <div><a href="/like"><i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i></a></div>
+              <div><a href="/like/$!{article.id}"><i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i></a></div>
               #end
-              <div class="likeCount">赞(11)</div>
+              <div class="likeCount">赞($!{likeCount})</div>
             </div>
             <div class="dislike">
-              #if($liked > 0)
+              #if($liked < 0)
               <div><a style="color:#337ab7;"><i class="fa fa-thumbs-o-down fa-3x" aria-hidden="true"></i></a></div>
               #else
-              <div><a href="/dislike"><i class="fa fa-thumbs-o-down fa-3x" aria-hidden="true"></i></a></div>
+              <div><a href="/dislike/$!{article.id}"><i class="fa fa-thumbs-o-down fa-3x" aria-hidden="true"></i></a></div>
               #end
-              <div class="disLikeCount">踩(11)</div>
+              <div class="disLikeCount">踩($!{dislikeCount})</div>
             </div>
           </div>
         </div>

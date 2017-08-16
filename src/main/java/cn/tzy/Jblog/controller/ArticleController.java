@@ -3,6 +3,7 @@ package cn.tzy.Jblog.controller;
 import cn.tzy.Jblog.model.*;
 import cn.tzy.Jblog.service.ArticleService;
 import cn.tzy.Jblog.service.JedisService;
+import cn.tzy.Jblog.service.LikeService;
 import cn.tzy.Jblog.service.TagService;
 import cn.tzy.Jblog.util.JblogUtil;
 import cn.tzy.Jblog.util.RedisKeyUntil;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import redis.clients.jedis.Jedis;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -28,6 +28,9 @@ import java.util.Set;
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
+
+    @Autowired
+    private LikeService likeService;
 
     @Autowired
     private TagService tagService;
@@ -293,6 +296,13 @@ public class ArticleController {
         clickCount.set("currentPage",currentPage);
         clickCount.set("sumPage",sumPage);
         model.addAttribute("clickCount",clickCount);
+
+        if (hostHolder.getUser()==null)
+            model.addAttribute("liked",0);
+        else
+            model.addAttribute("liked",likeService.getLikeStatus(hostHolder.getUser().getId(),articleId));
+        model.addAttribute("likeCount",likeService.getLikeCount(articleId));
+        model.addAttribute("dislikeCount",likeService.getDislikeCount(articleId));
 
         return "article";
     }
