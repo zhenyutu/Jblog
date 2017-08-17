@@ -318,6 +318,11 @@ public class ArticleController {
         model.addAttribute("vos",vos);
         model.addAttribute("commentsCount",comments.size());
 
+        String articleClickCount = jedisService.get(RedisKeyUntil.getClickCountKey("/article/"+article.getId()));
+        if (articleClickCount==null)
+            articleClickCount = "0";
+        model.addAttribute("articleClickCount",articleClickCount);
+
         return "article";
     }
 }

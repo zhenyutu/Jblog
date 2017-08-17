@@ -32,6 +32,7 @@
         <div class="articleFooter articleHead">
           <ul>
             <li><i class="fa fa-calendar fa-1x" aria-hidden="true"></i><span>$date.format('yyyy-MM-dd', $!{article.createdDate})</span></li>
+            <li><i class="fa fa-eye" aria-hidden="true"></i><span>$!{articleClickCount}</span></li>
             <li><i class="fa fa-list fa-1x" aria-hidden="true"></i><span>$!{article.category}</span></li>
             <li><i class="fa fa-tags fa-1x" aria-hidden="true"></i>
               #foreach($tag in $tags)
@@ -64,7 +65,7 @@
           </div>
         </div>
         <hr>
-        <div class="title"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i><span>已有$!{<commentsCount></commentsCount>}条评论</span></div>
+        <div class="title"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i><span>已有$!{commentsCount}条评论</span></div>
         <hr>
         <div class="commentList">
           <ul>
