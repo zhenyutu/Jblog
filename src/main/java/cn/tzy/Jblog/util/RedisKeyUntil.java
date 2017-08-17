@@ -12,6 +12,7 @@ public class RedisKeyUntil {
     private static String BIZ_CATEGORY = "CATEGORY";
     private static String BIZ_CLICK = "CLICK";
     private static String BIZ_ARTICLE_CLICK = "ARTICLE_CLICK";
+    private static String BIZ_EVENTQUEUE = "EVENTQUEUE";
 
     public static String getCategoryKey(String category){
         return BIZ_CATEGORY+SPLITE+category+SPLITE+"COUNT";
@@ -31,5 +32,9 @@ public class RedisKeyUntil {
 
     public static String getDisLikeKey(int articleId){
         return BIZ_DISLIKE+SPLITE+BIZ_ARTICLE+SPLITE+String.valueOf(articleId);
+    }
+
+    public static String getEventQueue(){
+        return BIZ_EVENTQUEUE;
     }
 }

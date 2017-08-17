@@ -1,5 +1,8 @@
 package cn.tzy.Jblog.controller;
 
+import cn.tzy.Jblog.aync.EventModel;
+import cn.tzy.Jblog.aync.EventProducer;
+import cn.tzy.Jblog.aync.EventType;
 import cn.tzy.Jblog.model.Comment;
 import cn.tzy.Jblog.model.HostHolder;
 import cn.tzy.Jblog.service.ArticleService;
@@ -26,6 +29,9 @@ public class CommentController {
     private ArticleService articleService;
 
     @Autowired
+    private EventProducer eventProducer;
+
+    @Autowired
     private HostHolder hostHolder;
 
     @RequestMapping(path = "/addComment/{articleId}")
@@ -44,6 +50,12 @@ public class CommentController {
 
         int count = commentService.getCommentsCount(articleId);
         articleService.updateCommentCount(articleId,count);
+
+        eventProducer.fireEvent(new EventModel().setType(EventType.COMMENT)
+                .setActorId(hostHolder.getUser().getId())
+                .setExts("username",hostHolder.getUser().getName())
+                .setExts("email","zhenyutu@126.com")
+                .setExts("articleId",String.valueOf(articleId)));
 
         return "redirect:/article/"+articleId;
     }

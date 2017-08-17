@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14bbdedc-95e8-4092-8000-7c459590c183" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventConsumer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventProducer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/MailHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/MailSender.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/mail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/ArticleController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/ArticleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/article.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Jblog.iml" afterPath="$PROJECT_DIR$/Jblog.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/CommentController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/CommentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,15 +54,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="article.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article.html">
+      <file leaf-file-name="EventConsumer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+            <state relative-caret-position="1219">
+              <caret line="53" column="57" lean-forward="false" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="57" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,10 +71,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -94,14 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/model/ViewObject.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/login.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/model/LoginTicket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/dao/LoginTicketDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/model/HostHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/interceptor/LoginRequestInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/UserService.java" />
@@ -120,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/TagService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/dao/ArticleTagDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/header.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/JblogUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/footer.html" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/interceptor/PassportInterceptor.java" />
@@ -133,7 +134,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/interceptor/ArticleClickInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/create.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/LikeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/LikeService.java" />
         <option value="$PROJECT_DIR$/script/create.sql" />
@@ -141,10 +141,20 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/dao/CommentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/SensitiveService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/CommentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/article.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/FollowHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventType.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/mail.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/MailSender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/MailHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventProducer.java" />
       </list>
     </option>
   </component>
@@ -359,97 +369,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Jblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aync" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -484,11 +434,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wenda" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.tzy.Jblog.service" />
@@ -497,11 +450,9 @@
       <recent name="cn.tzy.Jblog.controller" />
       <recent name="cn.tzy.Jblog.interceptor" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/src/main/java/cn/tzy/Jblog" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.WebApplication">
@@ -1062,12 +1013,12 @@
       <workItem from="1502710378884" duration="7385000" />
       <workItem from="1502755376519" duration="28325000" />
       <workItem from="1502844846260" duration="30502000" />
-      <workItem from="1502932814947" duration="611000" />
+      <workItem from="1502932814947" duration="9097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101737000" />
+    <option name="totallyTimeSpent" value="110223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="18" width="1366" height="750" extended-state="6" />
@@ -1091,7 +1042,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22613803" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38472834" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23352855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1127,137 +1078,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/model/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <marker date="1502713597097" expanded="true" signature="53:115" ph="/**...*/" />
-            <marker date="1502713597097" expanded="false" signature="355:366" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="376:382" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="413:424" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="437:443" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="473:484" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="497:503" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="543:554" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="573:579" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="613:624" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="641:647" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="695:706" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="733:739" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="771:782" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="797:803" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="847:858" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="881:887" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="921:932" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="951:957" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="1007:1018" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="1049:1055" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="1089:1100" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="1120:1126" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="1177:1188" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="1221:1227" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="1260:1271" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="1287:1293" ph=" }" />
-            <marker date="1502713597097" expanded="false" signature="1339:1350" ph=" { " />
-            <marker date="1502713597097" expanded="false" signature="1375:1381" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="50" column="38" lean-forward="false" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
-          <folding>
-            <marker date="1502798151931" expanded="true" signature="38:385" ph="..." />
-            <marker date="1502798151931" expanded="true" signature="387:449" ph="/**...*/" />
-            <marker date="1502798151931" expanded="false" signature="625:635" ph=" { " />
-            <marker date="1502798151931" expanded="false" signature="668:674" ph=" }" />
-            <marker date="1502798151931" expanded="false" signature="718:728" ph=" { " />
-            <marker date="1502798151931" expanded="false" signature="761:767" ph=" }" />
-            <marker date="1502798151931" expanded="false" signature="803:813" ph=" { " />
-            <marker date="1502798151931" expanded="false" signature="838:844" ph=" }" />
-            <marker date="1502798151931" expanded="true" signature="918:1866" ph="{...}" />
-            <marker date="1502798151931" expanded="true" signature="1937:2658" ph="{...}" />
-            <marker date="1502798151931" expanded="false" signature="2697:2707" ph=" { " />
-            <marker date="1502798151931" expanded="false" signature="2745:2751" ph=" }" />
-            <marker date="1502798151931" expanded="true" signature="2797:3228" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/af5116ba/3301bb46-4243-4132-a09b-5aa2b260e96c/blog.tag">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/CategoryController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/model/Tag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/style.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/dao/TagDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3301bb46-4243-4132-a09b-5aa2b260e96c/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/TagService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
-          <folding>
-            <marker date="1502778358839" expanded="true" signature="38:304" ph="..." />
-            <marker date="1502778358839" expanded="true" signature="306:368" ph="/**...*/" />
-            <marker date="1502778358839" expanded="false" signature="544:554" ph=" { " />
-            <marker date="1502778358839" expanded="false" signature="587:593" ph=" }" />
-            <marker date="1502778358839" expanded="false" signature="627:637" ph=" { " />
-            <marker date="1502778358839" expanded="false" signature="663:669" ph=" }" />
-            <marker date="1502778358839" expanded="true" signature="724:734" ph=" { " />
-            <marker date="1502778358839" expanded="true" signature="784:790" ph=" }" />
-            <marker date="1502778358839" expanded="false" signature="822:832" ph=" { " />
-            <marker date="1502778358839" expanded="false" signature="877:883" ph=" }" />
-            <marker date="1502778358839" expanded="false" signature="936:946" ph=" { " />
-            <marker date="1502778358839" expanded="false" signature="996:1002" ph=" }" />
-            <marker date="1502778358839" expanded="false" signature="1052:1062" ph=" { " />
-            <marker date="1502778358839" expanded="false" signature="1094:1100" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/dao/LoginTicketDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/dao/ArticleDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -1432,24 +1252,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <marker date="1502888550251" expanded="true" signature="28:90" ph="/**...*/" />
-            <marker date="1502888550251" expanded="false" signature="527:537" ph=" { " />
-            <marker date="1502888550251" expanded="false" signature="588:594" ph=" }" />
-            <marker date="1502888550251" expanded="false" signature="649:659" ph=" { " />
-            <marker date="1502888550251" expanded="false" signature="702:708" ph=" }" />
-            <marker date="1502888550251" expanded="false" signature="770:780" ph=" { " />
-            <marker date="1502888550251" expanded="false" signature="831:837" ph=" }" />
-            <marker date="1502888550251" expanded="true" signature="889:973" ph="{...}" />
-            <marker date="1502888550251" expanded="true" signature="1028:1115" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/LikeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -1606,18 +1408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-          <folding>
-            <marker date="1502891497571" expanded="true" signature="41:578" ph="..." />
-            <marker date="1502891497571" expanded="true" signature="580:642" ph="/**...*/" />
-            <marker date="1502891497571" expanded="true" signature="1084:1674" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1688,27 +1478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="68" column="21" lean-forward="false" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
-          <folding>
-            <marker date="1502798319795" expanded="true" signature="89:2377" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="499:729" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="747:881" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="901:2365" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="922:1058" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="1079:1223" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="1244:1383" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="1405:1557" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="1578:1757" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="1779:1928" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="1950:2112" ph="..." />
-            <marker date="1502798319795" expanded="true" signature="2134:2345" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1717,23 +1486,6 @@
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-          <folding>
-            <marker date="1502865168375" expanded="true" signature="41:1049" ph="..." />
-            <marker date="1502865168375" expanded="true" signature="1051:1113" ph="/**...*/" />
-            <marker date="1502865168375" expanded="true" signature="1505:4415" ph="{...}" />
-            <marker date="1502865168375" expanded="true" signature="4535:4607" ph="{...}" />
-            <marker date="1502865168375" expanded="true" signature="4875:5391" ph="{...}" />
-            <marker date="1502865168375" expanded="true" signature="5636:6146" ph="{...}" />
-            <marker date="1502865168375" expanded="true" signature="6241:6313" ph="{...}" />
-            <marker date="1502865168375" expanded="true" signature="6383:6628" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1818,12 +1570,250 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        <state relative-caret-position="-230">
+          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1502933409253" expanded="true" signature="21:4706" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="28:375" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="382:4706" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="403:1211" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="540:1201" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="561:1192" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="1242:4683" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="1272:4674" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="1352:4663" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="1435:2011" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="1450:1996" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="1814:1980" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="2138:3071" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="2199:3056" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="2230:2611" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="2291:2305" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="2645:3039" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="2706:2720" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="3256:4134" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="3271:4119" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="3322:4069" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="3358:4051" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="3403:3771" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="3456:3651" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="3815:4030" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="4290:4650" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="4336:4635" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="4407:4618" ph="..." />
+            <marker date="1502933409253" expanded="true" signature="4468:4511" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/RedisKeyUntil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-118">
+          <caret line="12" column="46" lean-forward="true" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding>
+            <marker date="1502937126497" expanded="true" signature="28:90" ph="/**...*/" />
+            <marker date="1502937126497" expanded="false" signature="584:594" ph=" { " />
+            <marker date="1502937126497" expanded="false" signature="645:651" ph=" }" />
+            <marker date="1502937126497" expanded="false" signature="706:716" ph=" { " />
+            <marker date="1502937126497" expanded="false" signature="759:765" ph=" }" />
+            <marker date="1502937126497" expanded="false" signature="827:837" ph=" { " />
+            <marker date="1502937126497" expanded="false" signature="888:894" ph=" }" />
+            <marker date="1502937126497" expanded="true" signature="946:1030" ph="{...}" />
+            <marker date="1502937126497" expanded="true" signature="1085:1172" ph="{...}" />
+            <marker date="1502937126497" expanded="false" signature="1214:1224" ph=" { " />
+            <marker date="1502937126497" expanded="false" signature="1246:1252" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/FollowHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="70" column="30" lean-forward="false" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+          <folding>
+            <marker date="1502798151931" expanded="false" signature="38:385" ph="..." />
+            <marker date="1502798151931" expanded="true" signature="387:449" ph="/**...*/" />
+            <marker date="1502798151931" expanded="false" signature="625:635" ph=" { " />
+            <marker date="1502798151931" expanded="false" signature="668:674" ph=" }" />
+            <marker date="1502798151931" expanded="false" signature="718:728" ph=" { " />
+            <marker date="1502798151931" expanded="false" signature="761:767" ph=" }" />
+            <marker date="1502798151931" expanded="false" signature="803:813" ph=" { " />
+            <marker date="1502798151931" expanded="false" signature="838:844" ph=" }" />
+            <marker date="1502798151931" expanded="true" signature="918:1866" ph="{...}" />
+            <marker date="1502798151931" expanded="true" signature="1937:2658" ph="{...}" />
+            <marker date="1502798151931" expanded="false" signature="2697:2707" ph=" { " />
+            <marker date="1502798151931" expanded="false" signature="2745:2751" ph=" }" />
+            <marker date="1502798151931" expanded="true" signature="2797:3228" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="146" column="40" lean-forward="true" selection-start-line="146" selection-start-column="40" selection-end-line="146" selection-end-column="40" />
+          <folding>
+            <marker date="1502865168375" expanded="true" signature="41:1049" ph="..." />
+            <marker date="1502865168375" expanded="true" signature="1051:1113" ph="/**...*/" />
+            <marker date="1502865168375" expanded="true" signature="1505:4415" ph="{...}" />
+            <marker date="1502865168375" expanded="true" signature="4535:4607" ph="{...}" />
+            <marker date="1502865168375" expanded="true" signature="4875:5391" ph="{...}" />
+            <marker date="1502865168375" expanded="true" signature="5636:6146" ph="{...}" />
+            <marker date="1502865168375" expanded="true" signature="6241:6313" ph="{...}" />
+            <marker date="1502865168375" expanded="true" signature="6383:6628" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+          <folding>
+            <marker date="1502956842834" expanded="true" signature="89:2542" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="499:729" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="747:881" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="901:2530" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="922:1058" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="1079:1223" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="1244:1383" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="1405:1557" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="1578:1757" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="1779:1928" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="1950:2112" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="2134:2345" ph="..." />
+            <marker date="1502956842834" expanded="true" signature="2367:2510" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/util/MailSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <folding>
+            <marker date="1502960952894" expanded="true" signature="35:600" ph="..." />
+            <marker date="1502960952894" expanded="true" signature="602:664" ph="/**...*/" />
+            <marker date="1502960952894" expanded="true" signature="982:1799" ph="{...}" />
+            <marker date="1502960952894" expanded="true" signature="1869:2549" ph="{...}" />
+            <marker date="1502960952894" expanded="true" signature="2363:2481" ph="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding>
+            <marker date="1502958287098" expanded="true" signature="41:691" ph="..." />
+            <marker date="1502958287098" expanded="true" signature="693:755" ph="/**...*/" />
+            <marker date="1502958287098" expanded="true" signature="1254:2166" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/MailHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding>
+            <marker date="1502961072434" expanded="true" signature="35:273" ph="..." />
+            <marker date="1502961072434" expanded="true" signature="275:337" ph="/**...*/" />
+            <marker date="1502961072434" expanded="true" signature="509:770" ph="{...}" />
+            <marker date="1502961072434" expanded="false" signature="835:846" ph=" { " />
+            <marker date="1502961072434" expanded="false" signature="886:892" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <marker date="1502939159293" expanded="true" signature="28:90" ph="/**...*/" />
+            <marker date="1502939159293" expanded="false" signature="206:216" ph=" { " />
+            <marker date="1502939159293" expanded="false" signature="235:241" ph=" }" />
+            <marker date="1502939159293" expanded="false" signature="268:278" ph=" { " />
+            <marker date="1502939159293" expanded="false" signature="291:297" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1502961072486" expanded="true" signature="35:259" ph="..." />
+            <marker date="1502961072486" expanded="true" signature="261:323" ph="/**...*/" />
+            <marker date="1502961072486" expanded="true" signature="465:621" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <marker date="1502960749406" expanded="true" signature="35:75" ph="..." />
+            <marker date="1502960749406" expanded="true" signature="77:139" ph="/**...*/" />
+            <marker date="1502960749406" expanded="true" signature="307:317" ph=" { " />
+            <marker date="1502960749406" expanded="true" signature="345:351" ph=" }" />
+            <marker date="1502960749406" expanded="false" signature="393:404" ph=" { " />
+            <marker date="1502960749406" expanded="false" signature="416:422" ph=" }" />
+            <marker date="1502960749406" expanded="false" signature="473:484" ph=" { " />
+            <marker date="1502960749406" expanded="false" signature="501:507" ph=" }" />
+            <marker date="1502960749406" expanded="true" signature="563:620" ph="{...}" />
+            <marker date="1502960749406" expanded="false" signature="659:669" ph=" { " />
+            <marker date="1502960749406" expanded="false" signature="690:696" ph=" }" />
+            <marker date="1502960749406" expanded="false" signature="728:739" ph=" { " />
+            <marker date="1502960749406" expanded="false" signature="751:757" ph=" }" />
+            <marker date="1502960749406" expanded="true" signature="805:859" ph="{...}" />
+            <marker date="1502960749406" expanded="false" signature="888:899" ph=" { " />
+            <marker date="1502960749406" expanded="false" signature="914:920" ph=" }" />
+            <marker date="1502960749406" expanded="true" signature="968:1028" ph="{...}" />
+            <marker date="1502960749406" expanded="false" signature="1059:1070" ph=" { " />
+            <marker date="1502960749406" expanded="false" signature="1087:1093" ph=" }" />
+            <marker date="1502960749406" expanded="true" signature="1145:1209" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <marker date="1502937126429" expanded="true" signature="52:114" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/tzy/Jblog/aync/EventConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="53" column="57" lean-forward="false" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
