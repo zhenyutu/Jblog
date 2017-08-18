@@ -23,6 +23,11 @@ header{
   list-style: none;
   margin-top: 12px;
 }
+.navigation ul li{
+  padding: 0;
+  margin: 0;
+}
+
 .navigation ul li a{
   text-decoration: none;
   font-size: 14px;
