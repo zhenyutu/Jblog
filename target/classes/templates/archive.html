@@ -1,0 +1,19 @@
+#parse("header.html")
+<div class="articleContant">
+    <div class="wrapper row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 row articleShow">
+            <h1>Archives</h1>
+            <hr>
+            #foreach($vo in $vos)
+                <h2>$!{vo.date}</h2>
+                <ul>
+                    #foreach($archive in $vo.list)
+                    <li><a href="/article/$!{archive.articleId}">$!{archive.articleTitle}</a></li>
+                    #end
+                </ul>
+            #end
+        </div>
+    </div>
+</div>
+#parse("footer.html")
