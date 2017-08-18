@@ -9,6 +9,7 @@ import cn.tzy.Jblog.util.JblogUtil;
 import cn.tzy.Jblog.util.RedisKeyUntil;
 import com.sun.javafx.binding.StringFormatter;
 import com.sun.javafx.sg.prism.NGShape;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -175,6 +176,19 @@ public class IndexController {
             model.addAttribute("create",0);
         }
         return "create";
+    }
+
+    @RequestMapping("/about")
+    public String about(Model model){
+
+        ViewObject clickCount = new ViewObject();
+        String currentPage = jedisService.get(RedisKeyUntil.getClickCountKey("/about"));
+        String sumPage = jedisService.get(RedisKeyUntil.getClickCountKey("SUM"));
+        clickCount.set("currentPage",currentPage);
+        clickCount.set("sumPage",sumPage);
+        model.addAttribute("clickCount",clickCount);
+
+        return "about";
     }
 
 }
