@@ -51,9 +51,7 @@ public class EventConsumer implements InitializingBean,ApplicationContextAware{
                     for (String event : events){
                         if (event.equals(key))
                             continue;
-                        System.out.println("event:"+event);
                         EventModel model = JSON.parseObject(event,EventModel.class);
-                        System.out.println("in the consumer:"+model.getExts("email"));
                         for (EventHandler handler:config.get(model.getType())){
                             handler.doHandler(model);
                         }

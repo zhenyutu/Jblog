@@ -146,12 +146,4 @@ public class JedisService implements InitializingBean{
 
         return result;
     }
-
-    public static void main(String[] args) {
-        JedisPool pool = new JedisPool("redis://localhost:6379/1");
-        Jedis jedis = pool.getResource();
-        String result = jedis.get("你好");
-        jedis.close();
-        System.out.println(result);
-    }
 }
